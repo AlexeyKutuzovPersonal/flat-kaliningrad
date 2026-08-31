@@ -1,0 +1,51 @@
+# Ежедневный снимок общей разметки в репозиторий.
+#
+# Зачем. Отметки и заметки живут в базе на бесплатном тарифе. Полгода
+# работы двух человек не должны существовать в одном экземпляре там,
+# куда нельзя заглянуть руками. Снимок ложится в backup/ и коммитится —
+# это копия, которая переживёт и исчезнувший проект, и стёртую базу.
+#
+# Требуются два секрета репозитория:
+#   SYNC_TOKEN — тот же, что в переменных проекта Pages
+#   MARKS_URL  — https://<адрес>/api/marks
+
+name: Снимок разметки
+
+on:
+  schedule:
+    - cron: '17 2 * * *'      # 02:17 UTC ежедневно
+  workflow_dispatch:           # и по кнопке, когда нужно прямо сейчас
+
+permissions:
+  contents: write
+
+jobs:
+  backup:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Снять разметку
+        env:
+          SYNC_TOKEN: ${{ secrets.SYNC_TOKEN }}
+        run: node tools/backup-marks.js --url "${{ secrets.MARKS_URL }}"
+
+      # Пустой ответ backup-marks.js считает ошибкой и снимок не пишет:
+      # уничтоженная разметка и молчащий сервер выглядят здесь одинаково,
+      # а перезаписать хороший снимок пустотой нечем откатить.
+
+      - name: Закоммитить, если что-то изменилось
+        run: |
+          git config user.name "Снимок разметки"
+          git config user.email "actions@github.com"
+          git add backup/
+          if git diff --staged --quiet; then
+            echo "Разметка не менялась — коммита нет."
+          else
+            git commit -m "снимок разметки $(date -u +%Y-%m-%d)"
+            git push
+          fi

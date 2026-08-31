@@ -1,0 +1,15 @@
+{
+  "name": "kv-kgd-dashboard",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Общая разметка дашборда по квартирам: страница на Cloudflare Pages, отметки в D1",
+  "scripts": {
+    "dev": "wrangler pages dev",
+    "deploy": "wrangler pages deploy",
+    "db:schema": "wrangler d1 execute kv-kgd-marks --remote --file=schema.sql",
+    "db:schema:local": "wrangler d1 execute kv-kgd-marks --local --file=schema.sql"
+  },
+  "devDependencies": {
+    "wrangler": "^3"
+  }
+}

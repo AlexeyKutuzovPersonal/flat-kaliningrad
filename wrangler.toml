@@ -1,0 +1,13 @@
+# Проект Cloudflare Pages. Имя нарочно не говорящее: пока Access
+# выключен, неугадываемый адрес — единственное, что отделяет разметку
+# от посторонних. Переименование меняет адрес страницы.
+name = "kv-kgd-2b17a94348"
+pages_build_output_dir = "public"
+compatibility_date = "2026-08-31"
+
+# База разметки. database_id подставляется после создания базы:
+#   cf.cmd d1 create kv-kgd-marks
+[[d1_databases]]
+binding = "DB"
+database_name = "kv-kgd-marks"
+database_id = "0aa9ff94-eef8-40f8-8038-8d05d5d13f88"

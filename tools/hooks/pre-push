@@ -1,0 +1,131 @@
+#!/bin/sh
+# ============================================================
+# pre-push — выкладывает страницу на Cloudflare Pages.
+#
+# Зачем хук вообще. Проект Pages создан как direct-upload:
+# `cf pages project list` показывает `Git Provider: No`, GitHub к нему
+# не подключён и пушей он не видит. Публикует ТОЛЬКО `pages deploy`.
+# Пока это была отдельная команда в README, случилось ровно то, чего
+# такие связки и стоят: 2026-08-20 два коммита ушли в GitHub, а живая
+# страница осталась пятичасовой давности и выглядела при этом свежей.
+#
+# Почему на push, а не на commit. Коммит — черновик: его делают, чтобы
+# не потерять работу. Страницу открывает отец, и публиковать каждый
+# промежуточный коммит нельзя. Push — это уже «отпускаю от себя»,
+# и совпадение «ушло с машины» = «ушло в бой» человеку понятно без
+# памяти о лишней команде.
+#
+# Порядок намеренный: СНАЧАЛА выкладка, потом push. Провал выкладки
+# останавливает push, и GitHub с Pages не разъезжаются молча —
+# несделанный push виден сразу, а несделанный deploy не виден никак.
+# Обратный порядок хук устроить не может: post-push в git нет.
+#
+# Хук лежит В РЕПОЗИТОРИИ и включается тем же `core.hooksPath
+# tools/hooks`, что и pre-commit, — отдельной настройки не нужно.
+#
+# Escape hatch, когда публиковать не надо:
+#     SKIP_DEPLOY=1 git push
+#
+# Посмотреть, что хук СОБИРАЕТСЯ сделать, ничего не публикуя:
+#     DEPLOY_DRY=1 git push        (push при этом тоже не выполнится)
+# ============================================================
+
+set -e
+
+PAGE="public/index.html"
+BRANCH_OK="refs/heads/main"
+PROJECT="kv-kgd-2b17a94348"
+ZERO="0000000000000000000000000000000000000000"
+
+if [ -n "$SKIP_DEPLOY" ]; then
+  echo "pre-push: SKIP_DEPLOY — выкладка пропущена, уходит только push." >&2
+  exit 0
+fi
+
+# --- что именно пушат ---------------------------------------------
+# git подаёт на stdin по строке на ref: <лок.ref> <лок.sha> <уд.ref> <уд.sha>
+# Нас интересует ровно main: `pages deploy` публикует в ПРОДАКШН, и
+# выкладывать туда ветку с экспериментом нельзя.
+NEED=""
+SHA=""
+while read -r local_ref local_sha remote_ref remote_sha; do
+  [ "$local_ref" = "$BRANCH_OK" ] || continue
+  [ "$local_sha" = "$ZERO" ] && continue        # удаление ветки
+
+  if [ "$remote_sha" = "$ZERO" ]; then
+    # Ветки на той стороне ещё нет — считаем, что страница новая.
+    NEED="да"
+  else
+    # Менялась ли страница в том, что уходит. Пересборка с теми же
+    # данными файл не трогает, и публиковать заново нечего.
+    if git diff --name-only "$remote_sha" "$local_sha" -- "$PAGE" | grep -q .; then
+      NEED="да"
+    fi
+  fi
+  SHA="$local_sha"
+done
+
+if [ -z "$SHA" ]; then
+  exit 0                                        # main не пушится — не наше дело
+fi
+
+if [ -z "$NEED" ]; then
+  echo "pre-push: $PAGE в этом push не менялся — выкладывать нечего."
+  exit 0
+fi
+
+# --- node -----------------------------------------------------------
+# Node здесь портативный и в PATH его нет. Порядок тот же, что у
+# pre-commit, но node24 ПЕРВЫМ: именно его зовёт cf.cmd для wrangler.
+NODE=""
+for c in \
+  "/d/Claude Cowork/CODE/LOCAL TOOLS/node24/node.exe" \
+  "/d/Claude Cowork/CODE/PROJECTS/Job Search/agents/JS_Scraper/node-portable/node.exe"
+do
+  if [ -x "$c" ]; then NODE="$c"; break; fi
+done
+if [ -z "$NODE" ] && command -v node >/dev/null 2>&1; then NODE="node"; fi
+
+WRANGLER="node_modules/wrangler/bin/wrangler.js"
+
+if [ -z "$NODE" ] || [ ! -f "$WRANGLER" ]; then
+  echo "pre-push: нечем выкладывать — не нашёл node или wrangler." >&2
+  echo "  node:     ${NODE:-не найден}" >&2
+  echo "  wrangler: $WRANGLER" >&2
+  echo "  Push остановлен намеренно: страница осталась бы старой, а коммит" >&2
+  echo "  в GitHub выглядел бы выложенным. Либо почините, либо SKIP_DEPLOY=1." >&2
+  exit 1
+fi
+
+SHORT=$(git rev-parse --short "$SHA")
+
+if [ -n "$DEPLOY_DRY" ]; then
+  echo "pre-push (DEPLOY_DRY): выложил бы $SHORT в проект $PROJECT"
+  echo "  node:     $NODE"
+  echo "  команда:  pages deploy"
+  exit 1
+fi
+
+echo "pre-push: выкладываю $SHORT на Cloudflare Pages (страница ~7 МБ, это небыстро)…"
+
+if ! "$NODE" "$WRANGLER" pages deploy; then
+  echo "" >&2
+  echo "pre-push: ВЫКЛАДКА НЕ УДАЛАСЬ — push остановлен." >&2
+  echo "  Коммиты остались локальными, живая страница не тронута: это" >&2
+  echo "  согласованное состояние, а не половина выкладки." >&2
+  echo "  Частая причина — истёкшая авторизация: cf login." >&2
+  exit 1
+fi
+
+# --- проверка, а не доверие ------------------------------------------
+# «Команда отработала» и «в бою лежит нужный коммит» — разные вещи.
+# Спрашиваем у Cloudflare, что у него теперь в продакшне.
+echo "pre-push: сверяю, что доехало…"
+if "$NODE" "$WRANGLER" pages deployment list --project-name "$PROJECT" 2>/dev/null \
+   | head -20 | grep -q "$SHORT"; then
+  echo "pre-push: в продакшне $SHORT. Отправляю push."
+else
+  echo "pre-push: выкладка прошла, но в списке развёртываний $SHORT не видно." >&2
+  echo "  Push продолжаю (страница обновлена), но сверьте руками:" >&2
+  echo "  cf pages deployment list --project-name $PROJECT" >&2
+fi
