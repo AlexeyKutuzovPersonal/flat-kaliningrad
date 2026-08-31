@@ -1,13 +1,13 @@
 // ============================================================
 // import-marks.js — перенос разметки из локального файла в общую базу.
 //
-// Отец размечал файл у себя: его отметки лежат в localStorage его
-// браузера и в выгрузке, которую он присылает. Здесь они переезжают
-// на сервер, где их увидят оба.
+// Метки лежали в localStorage локального сервера (tools/marks-server.js,
+// см. Task - search flat in Kalningrad/CLAUDE.md) до переезда на
+// Cloudflare Pages + D1. Здесь они переезжают на сервер.
 //
 //   node tools\import-marks.js <файл>                 сухой прогон
 //   node tools\import-marks.js <файл> --apply         запись в базу
-//   node tools\import-marks.js <файл> --author папа --url https://...
+//   node tools\import-marks.js <файл> --author Алексей --url https://...
 //
 // Принимает оба носителя:
 //   *.json  — кнопка «Только отметки»       (поле сырыеОтметки)
@@ -121,7 +121,7 @@ async function main() {
     process.exit(2);
   }
   const apply = process.argv.indexOf('--apply') !== -1;
-  const author = arg('--author', 'папа');
+  const author = arg('--author', 'Алексей');
   const url = arg('--url', 'http://127.0.0.1:8788/api/marks');
   const page = arg('--page', path.join(ROOT, 'public', 'index.html'));
 
