@@ -257,13 +257,24 @@ async function main() {
       'панель говорит, что разметка общая: «' + текстПанели.trim().slice(0, 60) + '»');
 
     // --- 6. разметка переживает перезагрузку у ОБОИХ ---
-    console.log('\n6. Метка и заметка переживают перезагрузку у обоих');
+    // Звёздная оценка ремонта (rating) добавлена в эту же проверку
+    // 2026-08-31 — именно она молча терялась на сервере до починки
+    // Rep/functions/api/marks.js (схема D1 была скопирована с дома,
+    // где опции rating у review-table.js никогда не было).
+    console.log('\n6. Метка, заметка и звёздная оценка переживают перезагрузку у обоих');
     const заметка2 = 'звонил, договорились на субботу';
     await A.click(sel('y'));
     await A.fill(`#slBody .sl-note[data-id="${id}"]`, заметка2);
+    await A.click(`#slBody .sl-star[data-id="${id}"][data-v="4"]`);
     await settle(A, 'Алексея');
     await B.evaluate(() => window.slSync.poll());
     await sleep(800);
+
+    const рейтингУВторого = await B.evaluate((x) => {
+      const m = window.slStore.marks()[x];
+      return m ? m.rating : null;
+    }, id);
+    ok(рейтингУВторого === 4, 'звёздная оценка доехала до второго браузера ДО перезагрузки');
 
     for (const [p, кто] of [[A, 'у поставившего'], [B, 'у второго']]) {
       await p.reload({ waitUntil: 'domcontentloaded', timeout: 120000 });
@@ -274,15 +285,22 @@ async function main() {
           return v && v.c ? v : null;
         }, id));
       ok(m.c === 'y' && m.note === заметка2, `метка и заметка на месте после перезагрузки ${кто}`);
+      ok(m.rating === 4, `звёздная оценка (4 из 5) на месте после перезагрузки ${кто}`);
       const виден = await p.evaluate((x) => {
         const el = document.querySelector('#slBody .sl-note[data-id="' + CSS.escape(x) + '"]');
         const btn = document.querySelector('#slBody .mkb[data-id="' + CSS.escape(x) + '"]');
         const tr = btn ? btn.closest('tr') : null;
-        return { заметка: el ? el.value : null, цвет: tr ? tr.className : null };
+        const stars = document.querySelectorAll('#slBody .sl-star[data-id="' + CSS.escape(x) + '"].on').length;
+        return { заметка: el ? el.value : null, цвет: tr ? tr.className : null, звёзд: stars };
       }, id);
       ok(виден.заметка === заметка2 && /mk-y/.test(виден.цвет || ''),
         `после перезагрузки это ВИДНО в таблице ${кто}, а не только лежит в памяти`);
+      ok(виден.звёзд === 4, `после перезагрузки закрашено ровно 4 звезды из 5 в таблице ${кто}`);
     }
+
+    // Убираем тестовую оценку — иначе она останется в общей разметке.
+    await A.click(`#slBody .sl-star[data-id="${id}"][data-v="4"]`);
+    await settle(A, 'Алексея');
 
     // --- 7. фильтры и сортировка ---
     console.log('\n7. Фильтры и сортировка — у каждого свои');

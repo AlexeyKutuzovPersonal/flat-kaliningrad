@@ -138,12 +138,14 @@ async function main() {
 
   for (const [id, m] of Object.entries(marks)) {
     const mark = m || {};
-    if (!mark.c && !mark.note && !mark.fin) { empty++; continue; }
+    // rating тоже считается содержимым — метка ТОЛЬКО со звёздами, без
+    // цвета/заметки/отделки, иначе тихо попадала бы в «пустые».
+    if (!mark.c && !mark.note && !mark.fin && mark.rating == null) { empty++; continue; }
     const hit = byNorm.get(norm(id));
     if (hit) {
-      landed[hit.id] = { c: mark.c || null, note: mark.note || null, fin: mark.fin || null };
+      landed[hit.id] = { c: mark.c || null, note: mark.note || null, fin: mark.fin || null, rating: mark.rating ?? null };
     } else {
-      orphans.push({ id, отметка: mark.c || null, заметка: mark.note || null, отделка: mark.fin || null });
+      orphans.push({ id, отметка: mark.c || null, заметка: mark.note || null, отделка: mark.fin || null, рейтинг: mark.rating ?? null });
     }
   }
 
@@ -178,7 +180,7 @@ async function main() {
   // человека, который эту заметку писал.
   const all = Object.assign({}, landed);
   for (const o of orphans) {
-    all[o.id] = { c: o.отметка, note: o.заметка, fin: o.отделка };
+    all[o.id] = { c: o.отметка, note: o.заметка, fin: o.отделка, rating: o.рейтинг };
   }
 
   const ids = Object.keys(all);

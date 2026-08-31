@@ -14,6 +14,7 @@ CREATE TABLE IF NOT EXISTS marks (
   color  TEXT,               -- 'g' | 'y' | 'r' | NULL
   note   TEXT,
   fin    TEXT,               -- отделка, переопределённая человеком
+  rating INTEGER,            -- личная оценка ремонта звёздами, 1..5 | NULL
   author TEXT,
   at     TEXT NOT NULL,      -- ISO, время правки
   rev    INTEGER NOT NULL    -- номер правки, монотонный на всю базу
@@ -29,6 +30,7 @@ CREATE TABLE IF NOT EXISTS marks_log (
   color  TEXT,
   note   TEXT,
   fin    TEXT,
+  rating INTEGER,
   author TEXT,
   at     TEXT NOT NULL,
   fields TEXT           -- какие поля правка реально трогала
