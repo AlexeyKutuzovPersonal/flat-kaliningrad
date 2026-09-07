@@ -1,0 +1,559 @@
+{
+ "снято": "2026-09-07T07:22:39.649Z",
+ "правка": 246,
+ "сырыеОтметки": {
+  "cian:https://kaliningrad.cian.ru/sale/flat/321263339/": {
+   "c": "y",
+   "note": "ремонт уставший, нет кухни вообще",
+   "fin": null,
+   "rating": null,
+   "by": "Алексей"
+  },
+  "cian:https://kaliningrad.cian.ru/sale/flat/275759889/": {
+   "c": "r",
+   "note": "голые стены",
+   "fin": null,
+   "rating": null,
+   "by": "Алексей"
+  },
+  "domclick:https://kaliningrad.domclick.ru/card/sale__flat__2077768442": {
+   "c": "y",
+   "note": "голые стены, далеко",
+   "fin": null,
+   "rating": null,
+   "by": "Алексей"
+  },
+  "cian:https://kaliningrad.cian.ru/sale/flat/326228891/": {
+   "c": "r",
+   "note": "нету фото",
+   "fin": null,
+   "rating": null,
+   "by": "Алексей"
+  },
+  "cian:https://kaliningrad.cian.ru/sale/flat/332477252/": {
+   "c": "r",
+   "note": "голые стены, далеко",
+   "fin": null,
+   "rating": null,
+   "by": "Алексей"
+  },
+  "yandex:https://realty.yandex.ru/offer/5200622013759522748/": {
+   "c": "g",
+   "note": "простенький ремонт",
+   "fin": "чистовая / под ключ",
+   "rating": 2,
+   "by": "Алексей"
+  },
+  "cian:https://kaliningrad.cian.ru/sale/flat/332443772/": {
+   "c": "r",
+   "note": "снято с публикации",
+   "fin": "предчистовая (серый ключ)",
+   "rating": null,
+   "by": "Алексей"
+  },
+  "cian:https://kaliningrad.cian.ru/sale/flat/332791402/": {
+   "c": "r",
+   "note": "старый фонд",
+   "fin": null,
+   "rating": null,
+   "by": "Алексей"
+  },
+  "cian:https://kaliningrad.cian.ru/sale/flat/326665352/": {
+   "c": "r",
+   "note": "старый фонд",
+   "fin": null,
+   "rating": null,
+   "by": "Алексей"
+  },
+  "cian:https://kaliningrad.cian.ru/sale/flat/333170183/": {
+   "c": "r",
+   "note": "нет литфта",
+   "fin": null,
+   "rating": null,
+   "by": "Алексей"
+  },
+  "domclick:https://kaliningrad.domclick.ru/card/sale__flat__2078021797": {
+   "c": "g",
+   "note": null,
+   "fin": "евроремонт",
+   "rating": 4,
+   "by": "Алексей"
+  },
+  "cian:https://kaliningrad.cian.ru/sale/flat/327134823/": {
+   "c": "r",
+   "note": "нет отделки",
+   "fin": null,
+   "rating": null,
+   "by": "Алексей"
+  },
+  "cian:https://kaliningrad.cian.ru/sale/flat/329184639/": {
+   "c": "g",
+   "note": null,
+   "fin": "евроремонт",
+   "rating": 4,
+   "by": "Алексей"
+  },
+  "cian:https://kaliningrad.cian.ru/sale/flat/323093288/": {
+   "c": "g",
+   "note": "сомнительный ремонт",
+   "fin": "евроремонт",
+   "rating": 4,
+   "by": "Алексей"
+  },
+  "domclick:https://kaliningrad.domclick.ru/card/sale__flat__2078932961": {
+   "c": "r",
+   "note": "нет отделки",
+   "fin": null,
+   "rating": null,
+   "by": "Алексей"
+  },
+  "cian:https://kaliningrad.cian.ru/sale/flat/331960573/": {
+   "c": "g",
+   "note": null,
+   "fin": "евроремонт",
+   "rating": 3,
+   "by": "Алексей"
+  },
+  "cian:https://kaliningrad.cian.ru/sale/flat/332769903/": {
+   "c": "r",
+   "note": "нет отделки",
+   "fin": null,
+   "rating": null,
+   "by": "Алексей"
+  },
+  "domclick:https://kaliningrad.domclick.ru/card/sale__flat__2079340948": {
+   "c": "r",
+   "note": "нет отделки",
+   "fin": null,
+   "rating": null,
+   "by": "Алексей"
+  },
+  "cian:https://kaliningrad.cian.ru/sale/flat/332395607/": {
+   "c": "r",
+   "note": "cнято с продажи",
+   "fin": null,
+   "rating": 3,
+   "by": "Алексей"
+  },
+  "cian:https://kaliningrad.cian.ru/sale/flat/331190348/": {
+   "c": "r",
+   "note": "нет фото",
+   "fin": null,
+   "rating": null,
+   "by": "Алексей"
+  },
+  "domclick:https://kaliningrad.domclick.ru/card/sale__flat__2078631135": {
+   "c": "y",
+   "note": "далеко, сомнительная планировка",
+   "fin": null,
+   "rating": null,
+   "by": "Алексей"
+  },
+  "domclick:https://kaliningrad.domclick.ru/card/sale__flat__2075609296": {
+   "c": "r",
+   "note": "ломаная ссылка",
+   "fin": null,
+   "rating": null,
+   "by": "Алексей"
+  },
+  "cian:https://kaliningrad.cian.ru/sale/flat/324911588/": {
+   "c": "y",
+   "note": "далеко",
+   "fin": null,
+   "rating": null,
+   "by": "Алексей"
+  },
+  "cian:https://kaliningrad.cian.ru/sale/flat/331349782/": {
+   "c": "g",
+   "note": null,
+   "fin": null,
+   "rating": 4,
+   "by": "Алексей"
+  },
+  "cian:https://kaliningrad.cian.ru/sale/flat/332504006/": {
+   "c": "g",
+   "note": null,
+   "fin": "евроремонт",
+   "rating": 4,
+   "by": "Алексей"
+  },
+  "cian:https://kaliningrad.cian.ru/sale/flat/325648190/": {
+   "c": "g",
+   "note": null,
+   "fin": null,
+   "rating": 4,
+   "by": "Алексей"
+  },
+  "cian:https://kaliningrad.cian.ru/sale/flat/326280858/": {
+   "c": "y",
+   "note": "мало жилой площади и дорого",
+   "fin": null,
+   "rating": null,
+   "by": "Алексей"
+  },
+  "domclick:https://kaliningrad.domclick.ru/card/sale__flat__2077727078": {
+   "c": "g",
+   "note": null,
+   "fin": "дизайнерский",
+   "rating": 4,
+   "by": "Алексей"
+  },
+  "cian:https://kaliningrad.cian.ru/sale/flat/329405063/": {
+   "c": "r",
+   "note": "чисто кирпичная кладка",
+   "fin": null,
+   "rating": null,
+   "by": "Алексей"
+  },
+  "domclick:https://kaliningrad.domclick.ru/card/sale__flat__2079148551": {
+   "c": "r",
+   "note": "нет фото",
+   "fin": null,
+   "rating": null,
+   "by": "Алексей"
+  },
+  "cian:https://kaliningrad.cian.ru/sale/flat/327734862/": {
+   "c": "r",
+   "note": "старый фонд и далеко",
+   "fin": null,
+   "rating": null,
+   "by": "Алексей"
+  },
+  "cian:https://kaliningrad.cian.ru/sale/flat/332484911/": {
+   "c": "r",
+   "note": "голые стены",
+   "fin": null,
+   "rating": null,
+   "by": "Алексей"
+  },
+  "domclick:https://kaliningrad.domclick.ru/card/sale__flat__2079048026": {
+   "c": "y",
+   "note": "малая прощадь",
+   "fin": null,
+   "rating": null,
+   "by": "Алексей"
+  },
+  "cian:https://kaliningrad.cian.ru/sale/flat/331065917/": {
+   "c": "g",
+   "note": null,
+   "fin": "евроремонт",
+   "rating": 5,
+   "by": "Алексей"
+  },
+  "cian:https://kaliningrad.cian.ru/sale/flat/331373013/": {
+   "c": "g",
+   "note": null,
+   "fin": null,
+   "rating": 5,
+   "by": "Алексей"
+  },
+  "cian:https://kaliningrad.cian.ru/sale/flat/332849681/": {
+   "c": "y",
+   "note": "колхозный ремонт",
+   "fin": null,
+   "rating": null,
+   "by": "Алексей"
+  },
+  "cian:https://kaliningrad.cian.ru/sale/flat/316342734/": {
+   "c": "g",
+   "note": null,
+   "fin": null,
+   "rating": 3,
+   "by": "Алексей"
+  },
+  "cian:https://kaliningrad.cian.ru/sale/flat/330306314/": {
+   "c": "g",
+   "note": null,
+   "fin": null,
+   "rating": 4,
+   "by": "Алексей"
+  },
+  "cian:https://kaliningrad.cian.ru/sale/flat/330853668/": {
+   "c": "g",
+   "note": null,
+   "fin": "евроремонт",
+   "rating": 4,
+   "by": "Алексей"
+  },
+  "domclick:https://kaliningrad.domclick.ru/card/sale__flat__2078728812": {
+   "c": "r",
+   "note": "1 этаж и нет ремонта",
+   "fin": null,
+   "rating": null,
+   "by": "Алексей"
+  },
+  "cian:https://kaliningrad.cian.ru/sale/flat/332620852/": {
+   "c": "r",
+   "note": "1 этаж и нет ремонта",
+   "fin": null,
+   "rating": null,
+   "by": "Алексей"
+  },
+  "domclick:https://kaliningrad.domclick.ru/card/sale__flat__2078362474": {
+   "c": "y",
+   "note": "голые стены, дорого и далеко",
+   "fin": null,
+   "rating": null,
+   "by": "Алексей"
+  },
+  "domclick:https://kaliningrad.domclick.ru/card/sale__flat__2078541652": {
+   "c": "y",
+   "note": "хорогий ремонт но второй этаж и нет лифта",
+   "fin": null,
+   "rating": null,
+   "by": "Алексей"
+  },
+  "domclick:https://kaliningrad.domclick.ru/card/sale__flat__2073529300": {
+   "c": "r",
+   "note": "1 этаж и голые стены",
+   "fin": null,
+   "rating": null,
+   "by": "Алексей"
+  },
+  "domclick:https://kaliningrad.domclick.ru/card/sale__flat__2077537360": {
+   "c": "r",
+   "note": "1 этаж, нет фото",
+   "fin": null,
+   "rating": null,
+   "by": "Алексей"
+  },
+  "cian:https://kaliningrad.cian.ru/sale/flat/329277672/": {
+   "c": "r",
+   "note": "классный ремонт но 1 этаж",
+   "fin": null,
+   "rating": null,
+   "by": "Алексей"
+  },
+  "cian:https://kaliningrad.cian.ru/sale/flat/330898754/": {
+   "c": "r",
+   "note": "крохотная, но с выходом на крышу)",
+   "fin": null,
+   "rating": null,
+   "by": "Алексей"
+  },
+  "yandex:https://realty.yandex.ru/offer/7876674650229113116/": {
+   "c": "r",
+   "note": "нету фото, второй этаж",
+   "fin": null,
+   "rating": null,
+   "by": "Алексей"
+  },
+  "domclick:https://kaliningrad.domclick.ru/card/sale__flat__2077702047": {
+   "c": "r",
+   "note": "голые стены, далеко",
+   "fin": null,
+   "rating": null,
+   "by": "Алексей"
+  },
+  "domclick:https://kaliningrad.domclick.ru/card/sale__flat__2078724641": {
+   "c": "y",
+   "note": "ремонт слабый",
+   "fin": null,
+   "rating": 3,
+   "by": "Alexey"
+  },
+  "domclick:https://kaliningrad.domclick.ru/card/sale__flat__2079349846": {
+   "c": "y",
+   "note": null,
+   "fin": "евроремонт",
+   "rating": 3,
+   "by": "Alexey"
+  },
+  "domclick:https://kaliningrad.domclick.ru/card/sale__flat__2077315708": {
+   "c": "r",
+   "note": "серая коробка",
+   "fin": "без отделки",
+   "rating": null,
+   "by": "Alexey"
+  },
+  "cian:https://kaliningrad.cian.ru/sale/flat/330631514/": {
+   "c": "y",
+   "note": "слабый ремонт",
+   "fin": "евроремонт",
+   "rating": 3,
+   "by": "Alexey"
+  },
+  "cian:https://kaliningrad.cian.ru/sale/flat/329175882/": {
+   "c": "r",
+   "note": "голые стены",
+   "fin": null,
+   "rating": null,
+   "by": "Alexey"
+  },
+  "domclick:https://kaliningrad.domclick.ru/card/sale__flat__2077867873": {
+   "c": "r",
+   "note": "голые стены",
+   "fin": null,
+   "rating": null,
+   "by": "Alexey"
+  },
+  "cian:https://kaliningrad.cian.ru/sale/flat/332446165/": {
+   "c": "r",
+   "note": "снято с публикации",
+   "fin": null,
+   "rating": null,
+   "by": "Alexey"
+  },
+  "domclick:https://kaliningrad.domclick.ru/card/sale__flat__2078914443": {
+   "c": "g",
+   "note": null,
+   "fin": "евроремонт",
+   "rating": 4,
+   "by": "Alexey"
+  },
+  "domclick:https://kaliningrad.domclick.ru/card/sale__flat__2076767611": {
+   "c": "g",
+   "note": null,
+   "fin": "евроремонт",
+   "rating": 4,
+   "by": "Alexey"
+  },
+  "cian:https://kaliningrad.cian.ru/sale/flat/332211838/": {
+   "c": "y",
+   "note": "кухня не доделана",
+   "fin": "евроремонт",
+   "rating": 3,
+   "by": "Alexey"
+  },
+  "cian:https://kaliningrad.cian.ru/sale/flat/332450517/": {
+   "c": "g",
+   "note": "чуть далековато",
+   "fin": null,
+   "rating": 5,
+   "by": "Alexey"
+  },
+  "cian:https://kaliningrad.cian.ru/sale/flat/315976797/": {
+   "c": "r",
+   "note": "колхох",
+   "fin": "косметический",
+   "rating": 2,
+   "by": "Alexey"
+  },
+  "cian:https://kaliningrad.cian.ru/sale/flat/320334819/": {
+   "c": "r",
+   "note": "серые стены",
+   "fin": null,
+   "rating": null,
+   "by": "Alexey"
+  },
+  "cian:https://kaliningrad.cian.ru/sale/flat/327698539/": {
+   "c": "r",
+   "note": "серые стены",
+   "fin": "предчистовая (серый ключ)",
+   "rating": null,
+   "by": "Alexey"
+  },
+  "cian:https://kaliningrad.cian.ru/sale/flat/320334820/": {
+   "c": "r",
+   "note": "серые стены",
+   "fin": null,
+   "rating": null,
+   "by": "Alexey"
+  },
+  "domclick:https://kaliningrad.domclick.ru/card/sale__flat__2079064069": {
+   "c": "y",
+   "note": "ремонт слабый",
+   "fin": "косметический",
+   "rating": null,
+   "by": "Alexey"
+  },
+  "domclick:https://kaliningrad.domclick.ru/card/sale__flat__2078886522": {
+   "c": "r",
+   "note": "снято",
+   "fin": null,
+   "rating": null,
+   "by": "Alexey"
+  },
+  "cian:https://kaliningrad.cian.ru/sale/flat/332906935/": {
+   "c": "r",
+   "note": "снято",
+   "fin": null,
+   "rating": null,
+   "by": "Alexey"
+  },
+  "domclick:https://kaliningrad.domclick.ru/card/sale__flat__2076553179": {
+   "c": "r",
+   "note": "снято",
+   "fin": null,
+   "rating": null,
+   "by": "Alexey"
+  },
+  "cian:https://kaliningrad.cian.ru/sale/flat/329173854/": {
+   "c": "r",
+   "note": "серые стены",
+   "fin": null,
+   "rating": null,
+   "by": "Alexey"
+  },
+  "domclick:https://kaliningrad.domclick.ru/card/sale__flat__2079379066": {
+   "c": "y",
+   "note": "далековато и ремонт на половину",
+   "fin": "чистовая / под ключ",
+   "rating": null,
+   "by": "Alexey"
+  },
+  "cian:https://kaliningrad.cian.ru/sale/flat/332465956/": {
+   "c": "r",
+   "note": "снято",
+   "fin": null,
+   "rating": null,
+   "by": "Alexey"
+  },
+  "cian:https://kaliningrad.cian.ru/sale/flat/326665354/": {
+   "c": "y",
+   "note": "колхо",
+   "fin": "косметический",
+   "rating": 2,
+   "by": "Alexey"
+  },
+  "cian:https://kaliningrad.cian.ru/sale/flat/332406732/": {
+   "c": "g",
+   "note": "далековато",
+   "fin": "косметический",
+   "rating": 4,
+   "by": "Alexey"
+  },
+  "domclick:https://kaliningrad.domclick.ru/card/sale__flat__2077303240": {
+   "c": "r",
+   "note": "голые стены",
+   "fin": null,
+   "rating": null,
+   "by": "Alexey"
+  },
+  "domclick:https://kaliningrad.domclick.ru/card/sale__flat__2074604273": {
+   "c": "r",
+   "note": "голые стены",
+   "fin": null,
+   "rating": null,
+   "by": "Alexey"
+  },
+  "cian:https://kaliningrad.cian.ru/sale/flat/329660804/": {
+   "c": "r",
+   "note": "снято",
+   "fin": null,
+   "rating": null,
+   "by": "Alexey"
+  },
+  "domclick:https://kaliningrad.domclick.ru/card/sale__flat__2071961303": {
+   "c": "r",
+   "note": "далеко и нет мебели",
+   "fin": null,
+   "rating": 3,
+   "by": "Alexey"
+  },
+  "domclick:https://kaliningrad.domclick.ru/card/sale__flat__2078821732": {
+   "c": "y",
+   "note": "далеко",
+   "fin": "евроремонт",
+   "rating": 4,
+   "by": "Alexey"
+  },
+  "cian:https://kaliningrad.cian.ru/sale/flat/333042686/": {
+   "c": "r",
+   "note": "голые стены",
+   "fin": null,
+   "rating": null,
+   "by": "Alexey"
+  }
+ }
+}
