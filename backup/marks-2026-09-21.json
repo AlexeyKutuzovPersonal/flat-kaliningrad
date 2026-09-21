@@ -1,0 +1,1602 @@
+{
+ "снято": "2026-09-21T08:00:39.512Z",
+ "правка": 749,
+ "сырыеОтметки": {
+  "cian:https://kaliningrad.cian.ru/sale/flat/321263339/": {
+   "c": "y",
+   "note": "ремонт уставший, нет кухни вообще",
+   "fin": null,
+   "rating": null,
+   "by": "Алексей"
+  },
+  "cian:https://kaliningrad.cian.ru/sale/flat/275759889/": {
+   "c": "r",
+   "note": "голые стены",
+   "fin": null,
+   "rating": null,
+   "by": "Алексей"
+  },
+  "domclick:https://kaliningrad.domclick.ru/card/sale__flat__2077768442": {
+   "c": "y",
+   "note": "голые стены, далеко",
+   "fin": null,
+   "rating": null,
+   "by": "Алексей"
+  },
+  "cian:https://kaliningrad.cian.ru/sale/flat/326228891/": {
+   "c": "r",
+   "note": "нету фото",
+   "fin": null,
+   "rating": null,
+   "by": "Алексей"
+  },
+  "cian:https://kaliningrad.cian.ru/sale/flat/332477252/": {
+   "c": "r",
+   "note": "голые стены, далеко",
+   "fin": null,
+   "rating": null,
+   "by": "Алексей"
+  },
+  "cian:https://kaliningrad.cian.ru/sale/flat/332443772/": {
+   "c": "r",
+   "note": "снято с публикации",
+   "fin": "предчистовая (серый ключ)",
+   "rating": null,
+   "by": "Алексей"
+  },
+  "cian:https://kaliningrad.cian.ru/sale/flat/332791402/": {
+   "c": "r",
+   "note": "старый фонд",
+   "fin": null,
+   "rating": null,
+   "by": "Алексей"
+  },
+  "cian:https://kaliningrad.cian.ru/sale/flat/326665352/": {
+   "c": "r",
+   "note": "старый фонд",
+   "fin": null,
+   "rating": null,
+   "by": "Алексей"
+  },
+  "cian:https://kaliningrad.cian.ru/sale/flat/333170183/": {
+   "c": "r",
+   "note": "нет литфта",
+   "fin": null,
+   "rating": null,
+   "by": "Алексей"
+  },
+  "cian:https://kaliningrad.cian.ru/sale/flat/327134823/": {
+   "c": "r",
+   "note": "нет отделки",
+   "fin": null,
+   "rating": null,
+   "by": "Алексей"
+  },
+  "domclick:https://kaliningrad.domclick.ru/card/sale__flat__2078932961": {
+   "c": "r",
+   "note": "нет отделки",
+   "fin": null,
+   "rating": null,
+   "by": "Алексей"
+  },
+  "cian:https://kaliningrad.cian.ru/sale/flat/332769903/": {
+   "c": "r",
+   "note": "нет отделки",
+   "fin": null,
+   "rating": null,
+   "by": "Алексей"
+  },
+  "domclick:https://kaliningrad.domclick.ru/card/sale__flat__2079340948": {
+   "c": "r",
+   "note": "нет отделки",
+   "fin": null,
+   "rating": null,
+   "by": "Алексей"
+  },
+  "cian:https://kaliningrad.cian.ru/sale/flat/332395607/": {
+   "c": "r",
+   "note": "cнято с продажи",
+   "fin": null,
+   "rating": 3,
+   "by": "Алексей"
+  },
+  "cian:https://kaliningrad.cian.ru/sale/flat/331190348/": {
+   "c": "r",
+   "note": "нет фото",
+   "fin": null,
+   "rating": null,
+   "by": "Алексей"
+  },
+  "domclick:https://kaliningrad.domclick.ru/card/sale__flat__2078631135": {
+   "c": "y",
+   "note": "далеко, сомнительная планировка",
+   "fin": null,
+   "rating": null,
+   "by": "Алексей"
+  },
+  "domclick:https://kaliningrad.domclick.ru/card/sale__flat__2075609296": {
+   "c": "r",
+   "note": "ломаная ссылка",
+   "fin": null,
+   "rating": null,
+   "by": "Алексей"
+  },
+  "cian:https://kaliningrad.cian.ru/sale/flat/326280858/": {
+   "c": "y",
+   "note": "мало жилой площади и дорого",
+   "fin": null,
+   "rating": null,
+   "by": "Алексей"
+  },
+  "cian:https://kaliningrad.cian.ru/sale/flat/329405063/": {
+   "c": "r",
+   "note": "чисто кирпичная кладка",
+   "fin": null,
+   "rating": null,
+   "by": "Алексей"
+  },
+  "domclick:https://kaliningrad.domclick.ru/card/sale__flat__2079148551": {
+   "c": "r",
+   "note": "нет фото",
+   "fin": null,
+   "rating": null,
+   "by": "Алексей"
+  },
+  "cian:https://kaliningrad.cian.ru/sale/flat/327734862/": {
+   "c": "r",
+   "note": "старый фонд и далеко",
+   "fin": null,
+   "rating": null,
+   "by": "Алексей"
+  },
+  "cian:https://kaliningrad.cian.ru/sale/flat/332484911/": {
+   "c": "r",
+   "note": "голые стены",
+   "fin": null,
+   "rating": null,
+   "by": "Алексей"
+  },
+  "domclick:https://kaliningrad.domclick.ru/card/sale__flat__2079048026": {
+   "c": "y",
+   "note": "малая прощадь",
+   "fin": null,
+   "rating": null,
+   "by": "Алексей"
+  },
+  "cian:https://kaliningrad.cian.ru/sale/flat/332849681/": {
+   "c": "y",
+   "note": "колхозный ремонт",
+   "fin": null,
+   "rating": null,
+   "by": "Алексей"
+  },
+  "cian:https://kaliningrad.cian.ru/sale/flat/316342734/": {
+   "c": "g",
+   "note": null,
+   "fin": null,
+   "rating": 3,
+   "by": "Алексей"
+  },
+  "domclick:https://kaliningrad.domclick.ru/card/sale__flat__2078728812": {
+   "c": "r",
+   "note": "1 этаж и нет ремонта",
+   "fin": null,
+   "rating": null,
+   "by": "Алексей"
+  },
+  "cian:https://kaliningrad.cian.ru/sale/flat/332620852/": {
+   "c": "r",
+   "note": "1 этаж и нет ремонта",
+   "fin": null,
+   "rating": null,
+   "by": "Алексей"
+  },
+  "domclick:https://kaliningrad.domclick.ru/card/sale__flat__2078362474": {
+   "c": "y",
+   "note": "голые стены, дорого и далеко",
+   "fin": null,
+   "rating": null,
+   "by": "Алексей"
+  },
+  "domclick:https://kaliningrad.domclick.ru/card/sale__flat__2078541652": {
+   "c": "y",
+   "note": "хорогий ремонт но второй этаж и нет лифта",
+   "fin": null,
+   "rating": null,
+   "by": "Алексей"
+  },
+  "domclick:https://kaliningrad.domclick.ru/card/sale__flat__2073529300": {
+   "c": "r",
+   "note": "1 этаж и голые стены",
+   "fin": null,
+   "rating": null,
+   "by": "Алексей"
+  },
+  "domclick:https://kaliningrad.domclick.ru/card/sale__flat__2077537360": {
+   "c": "r",
+   "note": "1 этаж, нет фото",
+   "fin": null,
+   "rating": null,
+   "by": "Алексей"
+  },
+  "cian:https://kaliningrad.cian.ru/sale/flat/329277672/": {
+   "c": "r",
+   "note": "классный ремонт но 1 этаж",
+   "fin": null,
+   "rating": null,
+   "by": "Алексей"
+  },
+  "cian:https://kaliningrad.cian.ru/sale/flat/330898754/": {
+   "c": "r",
+   "note": "крохотная, но с выходом на крышу)",
+   "fin": null,
+   "rating": null,
+   "by": "Алексей"
+  },
+  "yandex:https://realty.yandex.ru/offer/7876674650229113116/": {
+   "c": "r",
+   "note": "нету фото, второй этаж",
+   "fin": null,
+   "rating": null,
+   "by": "Алексей"
+  },
+  "domclick:https://kaliningrad.domclick.ru/card/sale__flat__2077702047": {
+   "c": "r",
+   "note": "голые стены, далеко",
+   "fin": null,
+   "rating": null,
+   "by": "Алексей"
+  },
+  "domclick:https://kaliningrad.domclick.ru/card/sale__flat__2078724641": {
+   "c": "y",
+   "note": "ремонт слабый",
+   "fin": null,
+   "rating": 3,
+   "by": "Alexey"
+  },
+  "domclick:https://kaliningrad.domclick.ru/card/sale__flat__2079349846": {
+   "c": "y",
+   "note": null,
+   "fin": "евроремонт",
+   "rating": 3,
+   "by": "Alexey"
+  },
+  "domclick:https://kaliningrad.domclick.ru/card/sale__flat__2077315708": {
+   "c": "r",
+   "note": "серая коробка",
+   "fin": "без отделки",
+   "rating": null,
+   "by": "Alexey"
+  },
+  "cian:https://kaliningrad.cian.ru/sale/flat/330631514/": {
+   "c": "y",
+   "note": "слабый ремонт",
+   "fin": "евроремонт",
+   "rating": 3,
+   "by": "Alexey"
+  },
+  "cian:https://kaliningrad.cian.ru/sale/flat/329175882/": {
+   "c": "r",
+   "note": "голые стены",
+   "fin": null,
+   "rating": null,
+   "by": "Alexey"
+  },
+  "domclick:https://kaliningrad.domclick.ru/card/sale__flat__2077867873": {
+   "c": "r",
+   "note": "голые стены",
+   "fin": null,
+   "rating": null,
+   "by": "Alexey"
+  },
+  "cian:https://kaliningrad.cian.ru/sale/flat/332446165/": {
+   "c": "r",
+   "note": "снято с публикации",
+   "fin": null,
+   "rating": null,
+   "by": "Alexey"
+  },
+  "cian:https://kaliningrad.cian.ru/sale/flat/332211838/": {
+   "c": "y",
+   "note": "кухня не доделана",
+   "fin": "евроремонт",
+   "rating": 3,
+   "by": "Alexey"
+  },
+  "cian:https://kaliningrad.cian.ru/sale/flat/315976797/": {
+   "c": "r",
+   "note": "колхох",
+   "fin": "косметический",
+   "rating": 2,
+   "by": "Alexey"
+  },
+  "cian:https://kaliningrad.cian.ru/sale/flat/320334819/": {
+   "c": "r",
+   "note": "серые стены",
+   "fin": null,
+   "rating": null,
+   "by": "Alexey"
+  },
+  "cian:https://kaliningrad.cian.ru/sale/flat/327698539/": {
+   "c": "r",
+   "note": "серые стены",
+   "fin": "предчистовая (серый ключ)",
+   "rating": null,
+   "by": "Alexey"
+  },
+  "cian:https://kaliningrad.cian.ru/sale/flat/320334820/": {
+   "c": "r",
+   "note": "серые стены",
+   "fin": null,
+   "rating": null,
+   "by": "Alexey"
+  },
+  "domclick:https://kaliningrad.domclick.ru/card/sale__flat__2079064069": {
+   "c": "y",
+   "note": "ремонт слабый",
+   "fin": "косметический",
+   "rating": null,
+   "by": "Alexey"
+  },
+  "domclick:https://kaliningrad.domclick.ru/card/sale__flat__2078886522": {
+   "c": "r",
+   "note": "снято",
+   "fin": null,
+   "rating": null,
+   "by": "Alexey"
+  },
+  "cian:https://kaliningrad.cian.ru/sale/flat/332906935/": {
+   "c": "r",
+   "note": "снято",
+   "fin": null,
+   "rating": null,
+   "by": "Alexey"
+  },
+  "domclick:https://kaliningrad.domclick.ru/card/sale__flat__2076553179": {
+   "c": "r",
+   "note": "снято",
+   "fin": null,
+   "rating": null,
+   "by": "Alexey"
+  },
+  "cian:https://kaliningrad.cian.ru/sale/flat/329173854/": {
+   "c": "r",
+   "note": "серые стены",
+   "fin": null,
+   "rating": null,
+   "by": "Alexey"
+  },
+  "domclick:https://kaliningrad.domclick.ru/card/sale__flat__2079379066": {
+   "c": "y",
+   "note": "далековато и ремонт на половину",
+   "fin": "чистовая / под ключ",
+   "rating": null,
+   "by": "Alexey"
+  },
+  "cian:https://kaliningrad.cian.ru/sale/flat/332465956/": {
+   "c": "r",
+   "note": "снято",
+   "fin": null,
+   "rating": null,
+   "by": "Alexey"
+  },
+  "cian:https://kaliningrad.cian.ru/sale/flat/326665354/": {
+   "c": "y",
+   "note": "колхо",
+   "fin": "косметический",
+   "rating": 2,
+   "by": "Alexey"
+  },
+  "domclick:https://kaliningrad.domclick.ru/card/sale__flat__2077303240": {
+   "c": "r",
+   "note": "голые стены",
+   "fin": null,
+   "rating": null,
+   "by": "Alexey"
+  },
+  "domclick:https://kaliningrad.domclick.ru/card/sale__flat__2074604273": {
+   "c": "r",
+   "note": "голые стены",
+   "fin": null,
+   "rating": null,
+   "by": "Alexey"
+  },
+  "cian:https://kaliningrad.cian.ru/sale/flat/329660804/": {
+   "c": "r",
+   "note": "снято",
+   "fin": null,
+   "rating": null,
+   "by": "Alexey"
+  },
+  "domclick:https://kaliningrad.domclick.ru/card/sale__flat__2071961303": {
+   "c": "r",
+   "note": "далеко и нет мебели",
+   "fin": null,
+   "rating": 3,
+   "by": "Alexey"
+  },
+  "domclick:https://kaliningrad.domclick.ru/card/sale__flat__2078821732": {
+   "c": "y",
+   "note": "далеко",
+   "fin": "евроремонт",
+   "rating": 4,
+   "by": "Alexey"
+  },
+  "cian:https://kaliningrad.cian.ru/sale/flat/333042686/": {
+   "c": "r",
+   "note": "голые стены",
+   "fin": null,
+   "rating": null,
+   "by": "Alexey"
+  },
+  "cian:https://kaliningrad.cian.ru/sale/flat/332354770/": {
+   "c": "y",
+   "note": "очень мало места, далеко в Ленинском",
+   "fin": null,
+   "rating": 3,
+   "by": "Alexey"
+  },
+  "cian:https://kaliningrad.cian.ru/sale/flat/329682456/": {
+   "c": "r",
+   "note": "снято с публикации",
+   "fin": null,
+   "rating": null,
+   "by": "МАС"
+  },
+  "cian:https://kaliningrad.cian.ru/sale/flat/331884173/": {
+   "c": "r",
+   "note": "снято с публикации",
+   "fin": null,
+   "rating": null,
+   "by": "МАС"
+  },
+  "cian:https://kaliningrad.cian.ru/sale/flat/332275005/": {
+   "c": "r",
+   "note": "снято с публикации",
+   "fin": null,
+   "rating": null,
+   "by": "МАС"
+  },
+  "cian:https://kaliningrad.cian.ru/sale/flat/332822612/": {
+   "c": "r",
+   "note": "голые стены",
+   "fin": null,
+   "rating": null,
+   "by": "МАС"
+  },
+  "cian:https://kaliningrad.cian.ru/sale/flat/330173185/": {
+   "c": "r",
+   "note": "голые стены",
+   "fin": null,
+   "rating": null,
+   "by": "МАС"
+  },
+  "domclick:https://kaliningrad.domclick.ru/card/sale__flat__2079349842": {
+   "c": "r",
+   "note": "голые стены",
+   "fin": null,
+   "rating": null,
+   "by": "МАС"
+  },
+  "domclick:https://kaliningrad.domclick.ru/card/sale__flat__2077535484": {
+   "c": "r",
+   "note": "снято с публикации",
+   "fin": null,
+   "rating": null,
+   "by": "МАС"
+  },
+  "domclick:https://kaliningrad.domclick.ru/card/sale__flat__2074925422": {
+   "c": "r",
+   "note": "снято с публикации",
+   "fin": null,
+   "rating": null,
+   "by": "МАС"
+  },
+  "cian:https://kaliningrad.cian.ru/sale/flat/333139826/": {
+   "c": "y",
+   "note": "далеко и дорого",
+   "fin": null,
+   "rating": 4,
+   "by": "МАС"
+  },
+  "cian:https://kaliningrad.cian.ru/sale/flat/332790673/": {
+   "c": "r",
+   "note": "голые стены",
+   "fin": null,
+   "rating": null,
+   "by": "МАС"
+  },
+  "domclick:https://kaliningrad.domclick.ru/card/sale__flat__2076170170": {
+   "c": "r",
+   "note": "снято с публикации",
+   "fin": null,
+   "rating": null,
+   "by": "МАС"
+  },
+  "domclick:https://kaliningrad.domclick.ru/card/sale__flat__2074567095": {
+   "c": "r",
+   "note": "голые стены",
+   "fin": null,
+   "rating": null,
+   "by": "МАС"
+  },
+  "domclick:https://kaliningrad.domclick.ru/card/sale__flat__2069025707": {
+   "c": "r",
+   "note": "снято с публикации",
+   "fin": null,
+   "rating": null,
+   "by": "МАС"
+  },
+  "domclick:https://kaliningrad.domclick.ru/card/sale__flat__2069025705": {
+   "c": "r",
+   "note": "снято с публикации",
+   "fin": null,
+   "rating": null,
+   "by": "МАС"
+  },
+  "domclick:https://kaliningrad.domclick.ru/card/sale__flat__2079349788": {
+   "c": "r",
+   "note": "снято с публикации",
+   "fin": null,
+   "rating": null,
+   "by": "МАС"
+  },
+  "domclick:https://kaliningrad.domclick.ru/card/sale__flat__2076408036": {
+   "c": "r",
+   "note": "снято с публикации",
+   "fin": null,
+   "rating": null,
+   "by": "МАС"
+  },
+  "cian:https://kaliningrad.cian.ru/sale/flat/332784821/": {
+   "c": "r",
+   "note": "снято с публикации",
+   "fin": null,
+   "rating": null,
+   "by": "МАС"
+  },
+  "domclick:https://kaliningrad.domclick.ru/card/sale__flat__2079213301": {
+   "c": "r",
+   "note": "голые стены",
+   "fin": null,
+   "rating": null,
+   "by": "МАС"
+  },
+  "domclick:https://kaliningrad.domclick.ru/card/sale__flat__2077931888": {
+   "c": "r",
+   "note": "голые стены",
+   "fin": null,
+   "rating": null,
+   "by": "МАС"
+  },
+  "domclick:https://kaliningrad.domclick.ru/card/sale__flat__2079349801": {
+   "c": "r",
+   "note": "снято с публикации",
+   "fin": null,
+   "rating": null,
+   "by": "МАС"
+  },
+  "cian:https://kaliningrad.cian.ru/sale/flat/330798192/": {
+   "c": "r",
+   "note": "голые стены",
+   "fin": null,
+   "rating": null,
+   "by": "МАС"
+  },
+  "avito:https://www.avito.ru/kaliningrad/kvartiry/dolya_2-k._kvartira_596_m_33_et._8107294532": {
+   "c": "r",
+   "note": "колхоз, доли",
+   "fin": null,
+   "rating": null,
+   "by": "МАС"
+  },
+  "avito:https://www.avito.ru/kaliningrad/kvartiry/2-k._kvartira_668_m_55_et._8032049031": {
+   "c": "r",
+   "note": "голые стены",
+   "fin": null,
+   "rating": null,
+   "by": "МАС"
+  },
+  "avito:https://www.avito.ru/kaliningrad/kvartiry/2-k._kvartira_481_m_33_et._8149345592": {
+   "c": "r",
+   "note": null,
+   "fin": null,
+   "rating": null,
+   "by": "МАС"
+  },
+  "yandex:https://realty.yandex.ru/offer/8106652631693511486/": {
+   "c": "r",
+   "note": "пригород",
+   "fin": null,
+   "rating": null,
+   "by": "МАС"
+  },
+  "etagi:https://kaliningrad.etagi.com/realty/13899595/": {
+   "c": "y",
+   "note": "мало площади, нет мебели",
+   "fin": null,
+   "rating": 3,
+   "by": "МАС"
+  },
+  "etagi:https://kaliningrad.etagi.com/realty/13122277/": {
+   "c": "r",
+   "note": "голые стены",
+   "fin": null,
+   "rating": null,
+   "by": "МАС"
+  },
+  "etagi:https://kaliningrad.etagi.com/realty/13206770/": {
+   "c": "y",
+   "note": "колхоз, мало места",
+   "fin": null,
+   "rating": 2,
+   "by": "МАС"
+  },
+  "etagi:https://kaliningrad.etagi.com/realty/13107590/": {
+   "c": "r",
+   "note": "голые стены",
+   "fin": null,
+   "rating": null,
+   "by": "МАС"
+  },
+  "avito:https://www.avito.ru/kaliningrad/kvartiry/1-k._kvartira_454_m_44_et._8309870124": {
+   "c": "r",
+   "note": "снято с публикации",
+   "fin": null,
+   "rating": null,
+   "by": "МАС"
+  },
+  "avito:https://www.avito.ru/kaliningrad/kvartiry/1-k._kvartira_444_m_45_et._7480323160": {
+   "c": "r",
+   "note": "колхоз",
+   "fin": null,
+   "rating": null,
+   "by": "МАС"
+  },
+  "avito:https://www.avito.ru/kaliningrad/kvartiry/1-k._kvartira_444_m_44_et._4567771974": {
+   "c": "r",
+   "note": "дубль",
+   "fin": null,
+   "rating": null,
+   "by": "МАС"
+  },
+  "yandex:https://realty.yandex.ru/offer/6301568197814228670/": {
+   "c": "r",
+   "note": "голые стены",
+   "fin": null,
+   "rating": null,
+   "by": "МАС"
+  },
+  "yandex:https://realty.yandex.ru/offer/9065728940822689029/": {
+   "c": "r",
+   "note": "пригород",
+   "fin": null,
+   "rating": null,
+   "by": "МАС"
+  },
+  "etagi:https://kaliningrad.etagi.com/realty/10548032/": {
+   "c": "r",
+   "note": "мало метров",
+   "fin": null,
+   "rating": 2,
+   "by": "МАС"
+  },
+  "yandex:https://realty.yandex.ru/offer/5200622013759494041/": {
+   "c": "r",
+   "note": "голые стены",
+   "fin": null,
+   "rating": null,
+   "by": "МАС"
+  },
+  "etagi:https://kaliningrad.etagi.com/realty/10963342/": {
+   "c": "r",
+   "note": "голые стены",
+   "fin": null,
+   "rating": null,
+   "by": "МАС"
+  },
+  "etagi:https://kaliningrad.etagi.com/realty/12179905/": {
+   "c": "r",
+   "note": "голые стены",
+   "fin": null,
+   "rating": null,
+   "by": "МАС"
+  },
+  "etagi:https://kaliningrad.etagi.com/realty/12473792/": {
+   "c": "r",
+   "note": "старый фонд",
+   "fin": null,
+   "rating": null,
+   "by": "МАС"
+  },
+  "yandex:https://realty.yandex.ru/offer/4507094364729903796/": {
+   "c": "r",
+   "note": "далеко",
+   "fin": null,
+   "rating": null,
+   "by": "МАС"
+  },
+  "avito:https://www.avito.ru/kaliningrad/kvartiry/2-k._kvartira_459_m_33_et._970710119": {
+   "c": "r",
+   "note": "колхоз и далеко",
+   "fin": null,
+   "rating": null,
+   "by": "МАС"
+  },
+  "etagi:https://kaliningrad.etagi.com/realty/12582409/": {
+   "c": "r",
+   "note": "голые стены",
+   "fin": null,
+   "rating": null,
+   "by": "МАС"
+  },
+  "avito:https://www.avito.ru/kaliningrad/kvartiry/1-k._kvartira_415_m_412_et._8241348701": {
+   "c": "r",
+   "note": "снято",
+   "fin": null,
+   "rating": null,
+   "by": "МАС"
+  },
+  "avito:https://www.avito.ru/kaliningrad/kvartiry/1-k._kvartira_38_m_55_et._8141394474": {
+   "c": "r",
+   "note": "снято",
+   "fin": null,
+   "rating": null,
+   "by": "МАС"
+  },
+  "avito:https://www.avito.ru/kaliningrad/kvartiry/1-k._kvartira_427_m_44_et._8008482341": {
+   "c": "r",
+   "note": "снято",
+   "fin": null,
+   "rating": null,
+   "by": "МАС"
+  },
+  "avito:https://www.avito.ru/kaliningrad/kvartiry/1-k._kvartira_427_m_44_et._8182475445": {
+   "c": "r",
+   "note": "снято",
+   "fin": null,
+   "rating": null,
+   "by": "МАС"
+  },
+  "yandex:https://realty.yandex.ru/offer/3940801894240885411/": {
+   "c": "r",
+   "note": "голые стены",
+   "fin": null,
+   "rating": null,
+   "by": "МАС"
+  },
+  "avito:https://www.avito.ru/kaliningrad/kvartiry/1-k._kvartira_422_m_49_et._8182268202": {
+   "c": "r",
+   "note": "снято",
+   "fin": null,
+   "rating": null,
+   "by": "МАС"
+  },
+  "etagi:https://kaliningrad.etagi.com/realty/9575004/": {
+   "c": "y",
+   "note": null,
+   "fin": null,
+   "rating": 2,
+   "by": "МАС"
+  },
+  "avito:https://www.avito.ru/kaliningrad/kvartiry/1-k._kvartira_40_m_45_et._8263350376": {
+   "c": "r",
+   "note": "далеко",
+   "fin": null,
+   "rating": null,
+   "by": "МАС"
+  },
+  "etagi:https://kaliningrad.etagi.com/realty/7571375/": {
+   "c": "r",
+   "note": "голые стены",
+   "fin": null,
+   "rating": null,
+   "by": "МАС"
+  },
+  "avito:https://www.avito.ru/kaliningrad/kvartiry/1-k._kvartira_397_m_34_et._8318882269": {
+   "c": "r",
+   "note": "снято",
+   "fin": null,
+   "rating": null,
+   "by": "МАС"
+  },
+  "yandex:https://realty.yandex.ru/offer/7730562805927720078/": {
+   "c": "r",
+   "note": "Гурьевск",
+   "fin": null,
+   "rating": null,
+   "by": "МАС"
+  },
+  "avito:https://www.avito.ru/kaliningrad/kvartiry/1-k._kvartira_39_m_89_et._8281226353": {
+   "c": "r",
+   "note": "далеко",
+   "fin": null,
+   "rating": null,
+   "by": "МАС"
+  },
+  "avito:https://www.avito.ru/kaliningrad/kvartiry/1-k._kvartira_474_m_55_et._8140097155": {
+   "c": "r",
+   "note": "снято",
+   "fin": null,
+   "rating": null,
+   "by": "МАС"
+  },
+  "etagi:https://kaliningrad.etagi.com/realty/13633633/": {
+   "c": "r",
+   "note": "голые стены",
+   "fin": null,
+   "rating": null,
+   "by": "МАС"
+  },
+  "avito:https://www.avito.ru/kaliningrad/kvartiry/2-k._kvartira_541_m_34_et._7990455052": {
+   "c": "r",
+   "note": "снято",
+   "fin": null,
+   "rating": null,
+   "by": "МАС"
+  },
+  "avito:https://www.avito.ru/kaliningrad/kvartiry/1-k._kvartira_386_m_89_et._8227140280": {
+   "c": "r",
+   "note": "далеко и колхозно",
+   "fin": null,
+   "rating": null,
+   "by": "МАС"
+  },
+  "yandex:https://realty.yandex.ru/offer/8421364036838641791/": {
+   "c": "r",
+   "note": "голые стены",
+   "fin": null,
+   "rating": null,
+   "by": "МАС"
+  },
+  "avito:https://www.avito.ru/kaliningrad/kvartiry/2-k._kvartira_681_m_33_et._8167060825": {
+   "c": "r",
+   "note": "голые стены",
+   "fin": null,
+   "rating": null,
+   "by": "МАС"
+  },
+  "cian:https://kaliningrad.cian.ru/sale/flat/324911588/": {
+   "c": "y",
+   "note": "далеко и дорого",
+   "fin": null,
+   "rating": 4,
+   "by": "МАС"
+  },
+  "avito:https://www.avito.ru/kaliningrad/kvartiry/1-k._kvartira_41_m_48_et._8208989960": {
+   "c": "r",
+   "note": "далекий колхоз",
+   "fin": null,
+   "rating": 2,
+   "by": "МАС"
+  },
+  "etagi:https://kaliningrad.etagi.com/realty/13678470/": {
+   "c": "r",
+   "note": "далекий колхоз",
+   "fin": null,
+   "rating": 2,
+   "by": "МАС"
+  },
+  "avito:https://www.avito.ru/kaliningrad/kvartiry/1-k._kvartira_47_m_34_et._8281068151": {
+   "c": "r",
+   "note": "не в городе",
+   "fin": null,
+   "rating": null,
+   "by": "МАС"
+  },
+  "avito:https://www.avito.ru/kaliningrad/kvartiry/1-k._kvartira_414_m_48_et._7664645717": {
+   "c": "r",
+   "note": "снято",
+   "fin": null,
+   "rating": null,
+   "by": "МАС"
+  },
+  "avito:https://www.avito.ru/kaliningrad/kvartiry/2-k._kvartira_506_m_33_et._8171931544": {
+   "c": "r",
+   "note": "снято",
+   "fin": null,
+   "rating": null,
+   "by": "МАС"
+  },
+  "etagi:https://kaliningrad.etagi.com/realty/7767793/": {
+   "c": "r",
+   "note": "колхоз",
+   "fin": null,
+   "rating": null,
+   "by": "МАС"
+  },
+  "etagi:https://kaliningrad.etagi.com/realty/10720113/": {
+   "c": "y",
+   "note": "далеко",
+   "fin": null,
+   "rating": 3,
+   "by": "МАС"
+  },
+  "avito:https://www.avito.ru/kaliningrad/kvartiry/1-k._kvartira_39_m_1416_et._8151931742": {
+   "c": "r",
+   "note": "далекий дорогой колхоз",
+   "fin": null,
+   "rating": 3,
+   "by": "МАС"
+  },
+  "etagi:https://kaliningrad.etagi.com/realty/13769973/": {
+   "c": "r",
+   "note": "клхоз",
+   "fin": null,
+   "rating": null,
+   "by": "МАС"
+  },
+  "avito:https://www.avito.ru/kaliningrad/kvartiry/1-k._kvartira_419_m_55_et._8140095914": {
+   "c": "r",
+   "note": "снято",
+   "fin": null,
+   "rating": null,
+   "by": "МАС"
+  },
+  "etagi:https://kaliningrad.etagi.com/realty/13784388/": {
+   "c": "y",
+   "note": "дорого",
+   "fin": null,
+   "rating": 4,
+   "by": "МАС"
+  },
+  "etagi:https://kaliningrad.etagi.com/realty/12796128/": {
+   "c": "r",
+   "note": "далеко",
+   "fin": null,
+   "rating": null,
+   "by": "МАС"
+  },
+  "avito:https://www.avito.ru/kaliningrad/kvartiry/1-k._kvartira_40_m_310_et._7344410085": {
+   "c": "r",
+   "note": "снято",
+   "fin": null,
+   "rating": null,
+   "by": "МАС"
+  },
+  "etagi:https://kaliningrad.etagi.com/realty/11911828/": {
+   "c": "r",
+   "note": "дорого, нет мебели и далеко",
+   "fin": null,
+   "rating": 5,
+   "by": "МАС"
+  },
+  "etagi:https://kaliningrad.etagi.com/realty/13713793/": {
+   "c": "r",
+   "note": "дорого и далеко",
+   "fin": null,
+   "rating": 5,
+   "by": "МАС"
+  },
+  "etagi:https://kaliningrad.etagi.com/realty/13582626/": {
+   "c": "r",
+   "note": "дорого далеко нет мебели",
+   "fin": null,
+   "rating": 5,
+   "by": "МАС"
+  },
+  "avito:https://www.avito.ru/kaliningrad/kvartiry/1-k._kvartira_382_m_79_et._8187744598": {
+   "c": "r",
+   "note": "снято",
+   "fin": null,
+   "rating": null,
+   "by": "МАС"
+  },
+  "etagi:https://kaliningrad.etagi.com/realty/12293495/": {
+   "c": "r",
+   "note": "очень далеко",
+   "fin": null,
+   "rating": 5,
+   "by": "МАС"
+  },
+  "avito:https://www.avito.ru/kaliningrad/kvartiry/1-k._kvartira_387_m_510_et._8239152555": {
+   "c": "r",
+   "note": "снято",
+   "fin": null,
+   "rating": null,
+   "by": "МАС"
+  },
+  "avito:https://www.avito.ru/kaliningrad/kvartiry/1-k._kvartira_462_m_1010_et._8044132003": {
+   "c": "r",
+   "note": "снято",
+   "fin": null,
+   "rating": null,
+   "by": "МАС"
+  },
+  "avito:https://www.avito.ru/kaliningrad/kvartiry/1-k._kvartira_41_m_39_et._8298821516": {
+   "c": "r",
+   "note": "снято",
+   "fin": null,
+   "rating": null,
+   "by": "МАС"
+  },
+  "avito:https://www.avito.ru/kaliningrad/kvartiry/1-k._kvartira_40_m_69_et._2623534607": {
+   "c": "r",
+   "note": "дорого и далеко",
+   "fin": null,
+   "rating": 2,
+   "by": "МАС"
+  },
+  "etagi:https://kaliningrad.etagi.com/realty/9990263/": {
+   "c": "r",
+   "note": "очень далеко",
+   "fin": null,
+   "rating": 3,
+   "by": "МАС"
+  },
+  "etagi:https://kaliningrad.etagi.com/realty/12264337/": {
+   "c": "r",
+   "note": "очень дорого за мало метров",
+   "fin": null,
+   "rating": null,
+   "by": "МАС"
+  },
+  "avito:https://www.avito.ru/kaliningrad/kvartiry/2-k._kvartira_52_m_99_et._7948817977": {
+   "c": "r",
+   "note": "снято",
+   "fin": null,
+   "rating": null,
+   "by": "МАС"
+  },
+  "avito:https://www.avito.ru/kaliningrad/kvartiry/1-k._kvartira_503_m_46_et._8164414824": {
+   "c": "r",
+   "note": "колхоз далеко",
+   "fin": null,
+   "rating": null,
+   "by": "МАС"
+  },
+  "avito:https://www.avito.ru/kaliningrad/kvartiry/1-k._kvartira_425_m_1116_et._8311562536": {
+   "c": "r",
+   "note": "снято",
+   "fin": null,
+   "rating": null,
+   "by": "МАС"
+  },
+  "avito:https://www.avito.ru/kaliningrad/kvartiry/1-k._kvartira_421_m_49_et._8278494271": {
+   "c": "y",
+   "note": "дорого ",
+   "fin": null,
+   "rating": 3,
+   "by": "МАС"
+  },
+  "avito:https://www.avito.ru/kaliningrad/kvartiry/1-k._kvartira_42_m_38_et._8207882522": {
+   "c": "r",
+   "note": "снято",
+   "fin": null,
+   "rating": null,
+   "by": "МАС"
+  },
+  "avito:https://www.avito.ru/kaliningrad/kvartiry/1-k._kvartira_395_m_49_et._8198097575": {
+   "c": "r",
+   "note": "снято",
+   "fin": null,
+   "rating": null,
+   "by": "МАС"
+  },
+  "avito:https://www.avito.ru/kaliningrad/kvartiry/1-k._kvartira_39_m_44_et._8171982735": {
+   "c": "r",
+   "note": "снято",
+   "fin": null,
+   "rating": null,
+   "by": "МАС"
+  },
+  "avito:https://www.avito.ru/kaliningrad/kvartiry/1-k._kvartira_386_m_47_et._8195593078": {
+   "c": "y",
+   "note": "далеко",
+   "fin": null,
+   "rating": 4,
+   "by": "МАС"
+  },
+  "etagi:https://kaliningrad.etagi.com/realty/13994077/": {
+   "c": "y",
+   "note": "мрачная невзрачная",
+   "fin": null,
+   "rating": 4,
+   "by": "МАС"
+  },
+  "etagi:https://kaliningrad.etagi.com/realty/12576499/": {
+   "c": "r",
+   "note": "очень далеко",
+   "fin": null,
+   "rating": null,
+   "by": "МАС"
+  },
+  "etagi:https://kaliningrad.etagi.com/realty/13355205/": {
+   "c": "r",
+   "note": "снято",
+   "fin": null,
+   "rating": null,
+   "by": "МАС"
+  },
+  "etagi:https://kaliningrad.etagi.com/realty/12967210/": {
+   "c": "r",
+   "note": "голая",
+   "fin": null,
+   "rating": null,
+   "by": "МАС"
+  },
+  "etagi:https://kaliningrad.etagi.com/realty/10791033/": {
+   "c": "r",
+   "note": "голые стены",
+   "fin": null,
+   "rating": null,
+   "by": "МАС"
+  },
+  "etagi:https://kaliningrad.etagi.com/realty/12071341/": {
+   "c": "r",
+   "note": "мало квадратов",
+   "fin": null,
+   "rating": null,
+   "by": "МАС"
+  },
+  "etagi:https://kaliningrad.etagi.com/realty/9150829/": {
+   "c": "r",
+   "note": "очень далеко",
+   "fin": null,
+   "rating": null,
+   "by": "МАС"
+  },
+  "etagi:https://kaliningrad.etagi.com/realty/12746845/": {
+   "c": "y",
+   "note": "ни то ни се",
+   "fin": "евроремонт",
+   "rating": 3,
+   "by": "МАС"
+  },
+  "avito:https://www.avito.ru/kaliningrad/kvartiry/2-k._kvartira_62_m_44_et._8313281961": {
+   "c": "r",
+   "note": "очень далеко",
+   "fin": null,
+   "rating": null,
+   "by": "МАС"
+  },
+  "avito:https://www.avito.ru/kaliningrad/kvartiry/2-k._kvartira_582_m_44_et._3484852898": {
+   "c": "r",
+   "note": "снято",
+   "fin": null,
+   "rating": null,
+   "by": "МАС"
+  },
+  "avito:https://www.avito.ru/kaliningrad/kvartiry/1-k._kvartira_483_m_79_et._2638548693": {
+   "c": "r",
+   "note": "снято",
+   "fin": null,
+   "rating": null,
+   "by": "МАС"
+  },
+  "avito:https://www.avito.ru/kaliningrad/kvartiry/1-k._kvartira_483_m_49_et._7640526859": {
+   "c": "r",
+   "note": "голые стены",
+   "fin": null,
+   "rating": null,
+   "by": "МАС"
+  },
+  "avito:https://www.avito.ru/kaliningrad/kvartiry/1-k._kvartira_44_m_58_et._8027703994": {
+   "c": "r",
+   "note": "снято",
+   "fin": null,
+   "rating": null,
+   "by": "МАС"
+  },
+  "avito:https://www.avito.ru/kaliningrad/kvartiry/1-k._kvartira_44_m_78_et._8227101753": {
+   "c": "r",
+   "note": "очень далеко",
+   "fin": null,
+   "rating": null,
+   "by": "МАС"
+  },
+  "avito:https://www.avito.ru/kaliningrad/kvartiry/1-k._kvartira_435_m_88_et._8230915530": {
+   "c": "y",
+   "note": "дорого",
+   "fin": "евроремонт",
+   "rating": 3,
+   "by": "МАС"
+  },
+  "avito:https://www.avito.ru/kaliningrad/kvartiry/2-k._kvartira_434_m_33_et._4532302532": {
+   "c": "r",
+   "note": "снято",
+   "fin": null,
+   "rating": null,
+   "by": "МАС"
+  },
+  "avito:https://www.avito.ru/kaliningrad/kvartiry/1-k._kvartira_432_m_47_et._8153088558": {
+   "c": "r",
+   "note": "снято",
+   "fin": null,
+   "rating": null,
+   "by": "МАС"
+  },
+  "avito:https://www.avito.ru/kaliningrad/kvartiry/1-k._kvartira_428_m_59_et._8172499344": {
+   "c": "r",
+   "note": "колхоз",
+   "fin": null,
+   "rating": null,
+   "by": "МАС"
+  },
+  "avito:https://www.avito.ru/kaliningrad/kvartiry/1-k._kvartira_421_m_56_et._8103708219": {
+   "c": "r",
+   "note": "снято",
+   "fin": null,
+   "rating": null,
+   "by": "МАС"
+  },
+  "avito:https://www.avito.ru/kaliningrad/kvartiry/1-k._kvartira_42_m_49_et._8137016322": {
+   "c": "r",
+   "note": "далекий колхоз",
+   "fin": "косметический",
+   "rating": null,
+   "by": "МАС"
+  },
+  "avito:https://www.avito.ru/kaliningrad/kvartiry/1-k._kvartira_42_m_89_et._3252622382": {
+   "c": "r",
+   "note": "снято",
+   "fin": null,
+   "rating": null,
+   "by": "МАС"
+  },
+  "avito:https://www.avito.ru/kaliningrad/kvartiry/1-k._kvartira_42_m_39_et._8262981245": {
+   "c": "r",
+   "note": "снято",
+   "fin": null,
+   "rating": null,
+   "by": "МАС"
+  },
+  "yandex:https://realty.yandex.ru/offer/6301568197814379608/": {
+   "c": "r",
+   "note": "очнь далеко и нет фото",
+   "fin": null,
+   "rating": null,
+   "by": "МАС"
+  },
+  "avito:https://www.avito.ru/kaliningrad/kvartiry/1-k._kvartira_413_m_55_et._8091339863": {
+   "c": "r",
+   "note": "снято",
+   "fin": null,
+   "rating": null,
+   "by": "МАС"
+  },
+  "avito:https://www.avito.ru/kaliningrad/kvartiry/2-k._kvartira_412_m_1214_et._8246085076": {
+   "c": "r",
+   "note": "снято",
+   "fin": null,
+   "rating": null,
+   "by": "МАС"
+  },
+  "avito:https://www.avito.ru/kaliningrad/kvartiry/1-k._kvartira_41_m_48_et._8027500641": {
+   "c": "r",
+   "note": "снято",
+   "fin": null,
+   "rating": null,
+   "by": "МАС"
+  },
+  "avito:https://www.avito.ru/kaliningrad/kvartiry/1-k._kvartira_41_m_58_et._8027049039": {
+   "c": "r",
+   "note": "снято",
+   "fin": null,
+   "rating": null,
+   "by": "МАС"
+  },
+  "avito:https://www.avito.ru/kaliningrad/kvartiry/1-k._kvartira_41_m_810_et._8261435039": {
+   "c": "r",
+   "note": "снято",
+   "fin": null,
+   "rating": null,
+   "by": "МАС"
+  },
+  "avito:https://www.avito.ru/kaliningrad/kvartiry/1-k._kvartira_41_m_1314_et._8321663167": {
+   "c": "r",
+   "note": "снято",
+   "fin": null,
+   "rating": null,
+   "by": "МАС"
+  },
+  "avito:https://www.avito.ru/kaliningrad/kvartiry/1-k._kvartira_404_m_1717_et._8096270410": {
+   "c": "r",
+   "note": "снято",
+   "fin": null,
+   "rating": null,
+   "by": "МАС"
+  },
+  "avito:https://www.avito.ru/kaliningrad/kvartiry/1-k._kvartira_40_m_33_et._8204651082": {
+   "c": "r",
+   "note": "снято",
+   "fin": null,
+   "rating": null,
+   "by": "МАС"
+  },
+  "avito:https://www.avito.ru/kaliningrad/kvartiry/2-k._kvartira_40_m_59_et._8263561457": {
+   "c": "r",
+   "note": "снято",
+   "fin": null,
+   "rating": null,
+   "by": "МАС"
+  },
+  "yandex:https://realty.yandex.ru/offer/4689873374532858129/": {
+   "c": "r",
+   "note": "дорого колхоз",
+   "fin": "косметический",
+   "rating": 2,
+   "by": "МАС"
+  },
+  "avito:https://www.avito.ru/kaliningrad/kvartiry/1-k._kvartira_40_m_33_et._7820062975": {
+   "c": "r",
+   "note": "очень далеко",
+   "fin": null,
+   "rating": null,
+   "by": "МАС"
+  },
+  "avito:https://www.avito.ru/kaliningrad/kvartiry/1-k._kvartira_40_m_310_et._8231865489": {
+   "c": "r",
+   "note": "очень далеко и дорого",
+   "fin": "евроремонт",
+   "rating": null,
+   "by": "МАС"
+  },
+  "avito:https://www.avito.ru/kaliningrad/kvartiry/1-k._kvartira_396_m_99_et._8117990885": {
+   "c": "y",
+   "note": null,
+   "fin": "евроремонт",
+   "rating": 3,
+   "by": "МАС"
+  },
+  "etagi:https://kaliningrad.etagi.com/realty/13307923/": {
+   "c": "y",
+   "note": "недо ремонт",
+   "fin": "евроремонт",
+   "rating": 3,
+   "by": "МАС"
+  },
+  "yandex:https://realty.yandex.ru/offer/499069890447007001/": {
+   "c": "y",
+   "note": "недо ремонт",
+   "fin": null,
+   "rating": 3,
+   "by": "МАС"
+  },
+  "avito:https://www.avito.ru/kaliningrad/kvartiry/1-k._kvartira_39_m_55_et._996791511": {
+   "c": "r",
+   "note": "дрова",
+   "fin": "косметический",
+   "rating": 2,
+   "by": "МАС"
+  },
+  "yandex:https://realty.yandex.ru/offer/9065862767451976425/": {
+   "c": "y",
+   "note": "монолит, без мебели",
+   "fin": "евроремонт",
+   "rating": 4,
+   "by": "МАС"
+  },
+  "avito:https://www.avito.ru/kaliningrad/kvartiry/1-k._kvartira_384_m_56_et._2370604228": {
+   "c": "y",
+   "note": "невзрачная",
+   "fin": "косметический",
+   "rating": 3,
+   "by": "МАС"
+  },
+  "avito:https://www.avito.ru/kaliningrad/kvartiry/1-k._kvartira_383_m_58_et._7972850235": {
+   "c": "r",
+   "note": "очень далеко",
+   "fin": "косметический",
+   "rating": 3,
+   "by": "МАС"
+  },
+  "yandex:https://realty.yandex.ru/offer/5227774683000777550/": {
+   "c": "r",
+   "note": "очнь далеко",
+   "fin": null,
+   "rating": null,
+   "by": "МАС"
+  },
+  "avito:https://www.avito.ru/kaliningrad/kvartiry/1-k._kvartira_38_m_79_et._8085141477": {
+   "c": "r",
+   "note": "снято",
+   "fin": null,
+   "rating": null,
+   "by": "МАС"
+  },
+  "yandex:https://realty.yandex.ru/offer/3962117428988909926/": {
+   "c": "r",
+   "note": "серые стены",
+   "fin": "предчистовая (серый ключ)",
+   "rating": null,
+   "by": "МАС"
+  },
+  "etagi:https://kaliningrad.etagi.com/realty/10885088/": {
+   "c": "r",
+   "note": "голые стены",
+   "fin": "предчистовая (серый ключ)",
+   "rating": null,
+   "by": "МАС"
+  },
+  "etagi:https://kaliningrad.etagi.com/realty/10885621/": {
+   "c": "r",
+   "note": "далеко и дорого",
+   "fin": "евроремонт",
+   "rating": 4,
+   "by": "МАС"
+  },
+  "etagi:https://kaliningrad.etagi.com/realty/10822201/": {
+   "c": "r",
+   "note": "колхоз мало метров",
+   "fin": "косметический",
+   "rating": 3,
+   "by": "МАС"
+  },
+  "yandex:https://realty.yandex.ru/offer/5200622013759522748/": {
+   "c": "y",
+   "note": "колхозный ремонт",
+   "fin": "косметический",
+   "rating": 2,
+   "by": "МАС"
+  },
+  "domclick:https://kaliningrad.domclick.ru/card/sale__flat__2078021797": {
+   "c": "r",
+   "note": "снято",
+   "fin": "евроремонт",
+   "rating": 4,
+   "by": "МАС"
+  },
+  "cian:https://kaliningrad.cian.ru/sale/flat/329184639/": {
+   "c": "g",
+   "note": "+расположение, кирпич",
+   "fin": null,
+   "rating": 4,
+   "by": "МАС"
+  },
+  "cian:https://kaliningrad.cian.ru/sale/flat/323093288/": {
+   "c": "g",
+   "note": "-ремонт +кирпич",
+   "fin": null,
+   "rating": 4,
+   "by": "МАС"
+  },
+  "cian:https://kaliningrad.cian.ru/sale/flat/331960573/": {
+   "c": "g",
+   "note": "-ремонт +расположение, площадь",
+   "fin": "косметический",
+   "rating": 3,
+   "by": "МАС"
+  },
+  "cian:https://kaliningrad.cian.ru/sale/flat/331349782/": {
+   "c": "g",
+   "note": "+ремонт, кирпич, расположение",
+   "fin": null,
+   "rating": 4,
+   "by": "МАС"
+  },
+  "cian:https://kaliningrad.cian.ru/sale/flat/332504006/": {
+   "c": "g",
+   "note": "+расположение, ремонт -монолит, цена",
+   "fin": "евроремонт",
+   "rating": 4,
+   "by": "МАС"
+  },
+  "cian:https://kaliningrad.cian.ru/sale/flat/325648190/": {
+   "c": "r",
+   "note": "снято",
+   "fin": null,
+   "rating": 4,
+   "by": "МАС"
+  },
+  "domclick:https://kaliningrad.domclick.ru/card/sale__flat__2077727078": {
+   "c": "r",
+   "note": "снято",
+   "fin": "дизайнерский",
+   "rating": 4,
+   "by": "МАС"
+  },
+  "cian:https://kaliningrad.cian.ru/sale/flat/331065917/": {
+   "c": "g",
+   "note": "+ремонт,площадь, кирпич, расположение",
+   "fin": "косметический",
+   "rating": 4,
+   "by": "МАС"
+  },
+  "cian:https://kaliningrad.cian.ru/sale/flat/331373013/": {
+   "c": "r",
+   "note": "снято",
+   "fin": null,
+   "rating": 5,
+   "by": "МАС"
+  },
+  "cian:https://kaliningrad.cian.ru/sale/flat/330306314/": {
+   "c": "g",
+   "note": "+локация, площадь -ремонт, цена",
+   "fin": null,
+   "rating": 4,
+   "by": "МАС"
+  },
+  "cian:https://kaliningrad.cian.ru/sale/flat/330853668/": {
+   "c": "r",
+   "note": "снято",
+   "fin": "евроремонт",
+   "rating": 4,
+   "by": "МАС"
+  },
+  "domclick:https://kaliningrad.domclick.ru/card/sale__flat__2078914443": {
+   "c": "r",
+   "note": "дубль",
+   "fin": "евроремонт",
+   "rating": 4,
+   "by": "МАС"
+  },
+  "domclick:https://kaliningrad.domclick.ru/card/sale__flat__2076767611": {
+   "c": "g",
+   "note": "+ремонт -локация,монолит,нет балкона",
+   "fin": "евроремонт",
+   "rating": 4,
+   "by": "МАС"
+  },
+  "cian:https://kaliningrad.cian.ru/sale/flat/332450517/": {
+   "c": "g",
+   "note": "+ремонт,цена упала до 6 -блоки, ?локация",
+   "fin": null,
+   "rating": 5,
+   "by": "МАС"
+  },
+  "cian:https://kaliningrad.cian.ru/sale/flat/332406732/": {
+   "c": "r",
+   "note": "снято",
+   "fin": "косметический",
+   "rating": 4,
+   "by": "МАС"
+  },
+  "cian:https://kaliningrad.cian.ru/sale/flat/307738146/": {
+   "c": "g",
+   "note": "+кирпич -площадь, ?локация,ремонт",
+   "fin": null,
+   "rating": 4,
+   "by": "МАС"
+  },
+  "cian:https://kaliningrad.cian.ru/sale/flat/332511976/": {
+   "c": "g",
+   "note": "+кирпич,ремонт,площадь  -цена, ?локация",
+   "fin": "евроремонт",
+   "rating": 5,
+   "by": "МАС"
+  },
+  "cian:https://kaliningrad.cian.ru/sale/flat/331224872/": {
+   "c": "g",
+   "note": "+ремонт -площадь,локация",
+   "fin": "евроремонт",
+   "rating": 4,
+   "by": "МАС"
+  },
+  "etagi:https://kaliningrad.etagi.com/realty/13718468/": {
+   "c": "y",
+   "note": "простенько но дешево, далеко",
+   "fin": null,
+   "rating": 3,
+   "by": "МАС"
+  },
+  "etagi:https://kaliningrad.etagi.com/realty/10431875/": {
+   "c": "g",
+   "note": "+ремонт,кирпич -площадь ?локация",
+   "fin": null,
+   "rating": 3,
+   "by": "МАС"
+  },
+  "etagi:https://kaliningrad.etagi.com/realty/13313991/": {
+   "c": "g",
+   "note": "+ремонт(кроме медведей),кирпич ?локация/площадь/цена",
+   "fin": null,
+   "rating": 4,
+   "by": "МАС"
+  },
+  "avito:https://www.avito.ru/kaliningrad/kvartiry/1-k._kvartira_38_m_316_et._8194670791": {
+   "c": "r",
+   "note": "дубль",
+   "fin": null,
+   "rating": 4,
+   "by": "МАС"
+  },
+  "etagi:https://kaliningrad.etagi.com/realty/13702988/": {
+   "c": "g",
+   "note": "+ремонт -цена ?локация",
+   "fin": null,
+   "rating": 4,
+   "by": "МАС"
+  }
+ }
+}
