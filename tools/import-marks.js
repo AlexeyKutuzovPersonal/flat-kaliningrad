@@ -138,14 +138,15 @@ async function main() {
 
   for (const [id, m] of Object.entries(marks)) {
     const mark = m || {};
-    // rating тоже считается содержимым — метка ТОЛЬКО со звёздами, без
-    // цвета/заметки/отделки, иначе тихо попадала бы в «пустые».
-    if (!mark.c && !mark.note && !mark.fin && mark.rating == null) { empty++; continue; }
+    // rating и round тоже считаются содержимым — метка ТОЛЬКО со звёздами
+    // или ТОЛЬКО с раундом, без цвета/заметки/отделки, иначе тихо попадала
+    // бы в «пустые».
+    if (!mark.c && !mark.note && !mark.fin && mark.rating == null && mark.round == null) { empty++; continue; }
     const hit = byNorm.get(norm(id));
     if (hit) {
-      landed[hit.id] = { c: mark.c || null, note: mark.note || null, fin: mark.fin || null, rating: mark.rating ?? null };
+      landed[hit.id] = { c: mark.c || null, note: mark.note || null, fin: mark.fin || null, rating: mark.rating ?? null, round: mark.round ?? null };
     } else {
-      orphans.push({ id, отметка: mark.c || null, заметка: mark.note || null, отделка: mark.fin || null, рейтинг: mark.rating ?? null });
+      orphans.push({ id, отметка: mark.c || null, заметка: mark.note || null, отделка: mark.fin || null, рейтинг: mark.rating ?? null, раунд: mark.round ?? null });
     }
   }
 
@@ -180,7 +181,7 @@ async function main() {
   // человека, который эту заметку писал.
   const all = Object.assign({}, landed);
   for (const o of orphans) {
-    all[o.id] = { c: o.отметка, note: o.заметка, fin: o.отделка, rating: o.рейтинг };
+    all[o.id] = { c: o.отметка, note: o.заметка, fin: o.отделка, rating: o.рейтинг, round: o.раунд };
   }
 
   const ids = Object.keys(all);

@@ -89,10 +89,74 @@ function killTree(pid) {
 }
 
 async function main() {
-  // Схема в локальной базе. Прогоняется каждый раз: таблиц может не
-  // быть вовсе, а «CREATE TABLE IF NOT EXISTS» ничего не ломает.
-  console.log('Схема в локальной базе…');
   const wrangler = path.join(ROOT, 'node_modules', 'wrangler', 'bin', 'wrangler.js');
+
+  // ---------- 0. миграция ADD COLUMN не роняет то, что уже размечено ----------
+  // Отдельно от всего, что ниже: здесь база сперва заводится СО СТАРОЙ
+  // схемой (какой она была до 2026-09-22, без round) и настоящей на вид
+  // строкой — так, как выглядит боевая база ДО применения
+  // migrations/2026-09-22-round.sql. Дальше миграция накатывается, и
+  // строка обязана остаться той же — только с новым полем round = NULL
+  // («раунд ещё не назначен»), а не потерять цвет/заметку/отделку/рейтинг.
+  console.log('0. Миграция round.sql на базе со старой схемой (без round)…');
+  const d1 = (sql) => {
+    const args = [wrangler, 'd1', 'execute', 'kv-kgd-marks', '--local', '--yes', `--command=${sql}`];
+    const r = spawnSync(process.execPath, args, { cwd: ROOT, encoding: 'utf8' });
+    if (r.status !== 0) {
+      console.error(r.stderr || r.stdout);
+      throw new Error('d1 execute упал на: ' + sql.slice(0, 80));
+    }
+    return r.stdout;
+  };
+  d1('DROP TABLE IF EXISTS marks; DROP TABLE IF EXISTS marks_log; DROP TABLE IF EXISTS meta;');
+  // Схема ДО миграции — ровно то, что лежало в schema.sql до 2026-09-22
+  // (без колонки round). Заводить её здесь заранее значит не проверить
+  // вообще ничего.
+  d1(`CREATE TABLE marks (id TEXT PRIMARY KEY, color TEXT, note TEXT, fin TEXT, rating INTEGER, author TEXT, at TEXT NOT NULL, rev INTEGER NOT NULL);
+CREATE TABLE marks_log (seq INTEGER PRIMARY KEY AUTOINCREMENT, id TEXT NOT NULL, color TEXT, note TEXT, fin TEXT, rating INTEGER, author TEXT, at TEXT NOT NULL, fields TEXT);
+CREATE TABLE meta (k TEXT PRIMARY KEY, v INTEGER NOT NULL);
+INSERT INTO meta (k, v) VALUES ('rev', 1);
+INSERT INTO marks (id, color, note, fin, rating, author, at, rev) VALUES ('t:до-миграции', 'g', 'заметка до миграции', 'евроремонт', 4, 'кто-то', '2026-01-01T00:00:00Z', 1);`);
+  const schemaMig = spawnSync(process.execPath,
+    [wrangler, 'd1', 'execute', 'kv-kgd-marks', '--local', '--file=migrations/2026-09-22-round.sql', '--yes'],
+    { cwd: ROOT, encoding: 'utf8' });
+  if (schemaMig.status !== 0) {
+    console.error(schemaMig.stderr || schemaMig.stdout);
+    throw new Error('миграция migrations/2026-09-22-round.sql не легла');
+  }
+  // Проверяем не то, как САМ wrangler d1 execute форматирует NULL в JSON
+  // (у него на столбце, добавленном ALTER TABLE, есть своя причуда —
+  // отдаёт строку "null" текстом, а не JSON-значение null), а РЕАЛЬНЫЙ
+  // путь чтения: та же самая функция functions/api/marks.js, что стоит
+  // в проде, читает базу через биндинг D1. Временный сервер — только на
+  // время этой проверки, дальше поднимется постоянный для сквозных тестов.
+  console.log('  поднимаю временный сервер — проверяю чтение тем же кодом, что в проде…');
+  const migSrv = spawn(process.execPath, [wrangler, 'pages', 'dev', '--port', String(PORT), '--ip', '127.0.0.1'],
+    { cwd: ROOT, stdio: ['ignore', 'pipe', 'pipe'] });
+  let migLog = '';
+  migSrv.stdout.on('data', (d) => { migLog += d; });
+  migSrv.stderr.on('data', (d) => { migLog += d; });
+  try {
+    await until('временный сервер отвечает', async () => {
+      const r = await fetch(`${BASE}/api/marks?since=0`, { headers: { 'x-sync-token': TOKEN } });
+      return r.ok;
+    }, 90000).catch((e) => { console.error(migLog.slice(-1500)); throw e; });
+    const res = await fetch(`${BASE}/api/marks?since=0`, { headers: { 'x-sync-token': TOKEN } });
+    const body = await res.json();
+    const m = body.marks && body.marks['t:до-миграции'];
+    ok(!!(m && m.c === 'g' && m.note === 'заметка до миграции' && m.fin === 'евроремонт' && m.rating === 4),
+      'после миграции /api/marks по-прежнему отдаёт цвет/заметку/отделку/рейтинг существующей строки');
+    ok(!!m && m.round == null,
+      'round у строки, заведённой ДО миграции, — null («раунд не назначен»), а не ошибка и не 0');
+  } finally {
+    killTree(migSrv.pid);
+  }
+  console.log('  готово — существующая разметка миграцию пережила без потерь\n');
+
+  // ---------- дальше как раньше: свежая схема для сквозных проверок ----------
+  // Прогоняется каждый раз: таблиц может не быть вовсе, а «CREATE TABLE
+  // IF NOT EXISTS» ничего не ломает.
+  console.log('Схема в локальной базе…');
 
   // База пересоздаётся ЦЕЛИКОМ, а не дочищается. Остатки прошлого
   // прогона делают стенд зелёным на сломанном коде — «отметка доехала»
@@ -301,6 +365,50 @@ async function main() {
     // Убираем тестовую оценку — иначе она останется в общей разметке.
     await A.click(`#slBody .sl-star[data-id="${id}"][data-v="4"]`);
     await settle(A, 'Алексея');
+
+    // --- 6б. раунд просмотра доезжает и переживает перезагрузку ---
+    // Независимость от цвета — здесь же: у объекта уже стоят жёлтая
+    // метка и заметка (секция 6), и установка раунда обязана их не
+    // тронуть, как и снятие раунда ниже.
+    console.log('\n6б. Раунд просмотра доезжает до второго и переживает перезагрузку у обоих');
+    await A.selectOption(`#slBody select.sl-round[data-id="${id}"]`, '2');
+    await settle(A, 'Алексея');
+    await B.evaluate(() => window.slSync.poll());
+    await until('раунд приехал ко второму', async () =>
+      await B.evaluate((x) => { const m = window.slStore.marks()[x]; return m && m.round === 2; }, id));
+    ok(true, 'раунд 2 доехал до второго браузера');
+    const выбранРаундУВторого = await B.evaluate((x) =>
+      (document.querySelector('#slBody select.sl-round[data-id="' + CSS.escape(x) + '"]') || {}).value, id);
+    ok(выбранРаундУВторого === '2', 'у второго в самом select выбран «Р2», а не только в памяти');
+
+    const доРаунда = await A.evaluate((x) => window.slStore.marks()[x], id);
+    ok(!!(доРаунда && доРаунда.c === 'y' && доРаунда.note === заметка2),
+      'установка раунда не тронула цвет и заметку той же строки');
+
+    for (const [p, кто] of [[A, 'у поставившего'], [B, 'у второго']]) {
+      await p.reload({ waitUntil: 'domcontentloaded', timeout: 120000 });
+      await p.waitForSelector('#slBody tr', { timeout: 120000 });
+      const m = await until('раунд поднялся после перезагрузки ' + кто, async () =>
+        await p.evaluate((x) => {
+          const v = window.slStore.marks()[x];
+          return v && v.round ? v : null;
+        }, id));
+      ok(m.round === 2, `раунд (2) на месте после перезагрузки ${кто}`);
+      const видноРаунд = await p.evaluate((x) =>
+        (document.querySelector('#slBody select.sl-round[data-id="' + CSS.escape(x) + '"]') || {}).value, id);
+      ok(видноРаунд === '2', `после перезагрузки раунд ВИДЕН в select ${кто}, а не только лежит в памяти`);
+    }
+
+    console.log('\n6в. Снятие раунда («—») доезжает и не трогает цвет/заметку');
+    await A.selectOption(`#slBody select.sl-round[data-id="${id}"]`, '');
+    await settle(A, 'Алексея');
+    await B.evaluate(() => window.slSync.poll());
+    await until('снятие раунда доехало до второго', async () =>
+      await B.evaluate((x) => { const m = window.slStore.marks()[x]; return !(m && m.round); }, id));
+    ok(true, 'снятие раунда доехало до второго браузера');
+    const послеСнятияРаунда = await A.evaluate((x) => window.slStore.marks()[x], id);
+    ok(!!(послеСнятияРаунда && послеСнятияРаунда.c === 'y' && послеСнятияРаунда.note === заметка2),
+      'снятие раунда не тронуло цвет и заметку той же строки');
 
     // --- 7. фильтры и сортировка ---
     console.log('\n7. Фильтры и сортировка — у каждого свои');

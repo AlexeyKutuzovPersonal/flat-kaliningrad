@@ -15,6 +15,7 @@ CREATE TABLE IF NOT EXISTS marks (
   note   TEXT,
   fin    TEXT,               -- отделка, переопределённая человеком
   rating INTEGER,            -- личная оценка ремонта звёздами, 1..5 | NULL
+  round  INTEGER,            -- раунд просмотра, 1..3 | NULL (без раунда)
   author TEXT,
   at     TEXT NOT NULL,      -- ISO, время правки
   rev    INTEGER NOT NULL    -- номер правки, монотонный на всю базу
@@ -31,6 +32,7 @@ CREATE TABLE IF NOT EXISTS marks_log (
   note   TEXT,
   fin    TEXT,
   rating INTEGER,
+  round  INTEGER,
   author TEXT,
   at     TEXT NOT NULL,
   fields TEXT           -- какие поля правка реально трогала

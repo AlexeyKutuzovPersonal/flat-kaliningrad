@@ -81,6 +81,12 @@ function cleanRating(v) {
   return v == null ? null : Math.max(1, Math.min(5, Math.round(Number(v))));
 }
 
+// round — раунд просмотра, целое 1..3. Тот же приём, что у rating: число,
+// а не строка, клиент сравнивает его строгим равенством при выборе «—».
+function cleanRound(v) {
+  return v == null ? null : Math.max(1, Math.min(3, Math.round(Number(v))));
+}
+
 export async function onRequestGet({ request, env }) {
   const bad = denied(request, env) || noDb(env);
   if (bad) return bad;
@@ -94,13 +100,13 @@ export async function onRequestGet({ request, env }) {
   const rev = head ? head.v : 0;
 
   const { results } = await env.DB
-    .prepare('SELECT id, color, note, fin, rating, author FROM marks WHERE rev > ?1 AND rev <= ?2')
+    .prepare('SELECT id, color, note, fin, rating, round, author FROM marks WHERE rev > ?1 AND rev <= ?2')
     .bind(since, rev)
     .all();
 
   const marks = {};
   for (const r of results || []) {
-    marks[r.id] = { c: r.color, note: r.note, fin: r.fin, rating: r.rating, by: r.author };
+    marks[r.id] = { c: r.color, note: r.note, fin: r.fin, rating: r.rating, round: r.round, by: r.author };
   }
   return json({ rev, marks });
 }
@@ -131,12 +137,14 @@ export async function onRequestPost({ request, env }) {
   const at = new Date().toISOString();
 
   // Какие поля правка трогает. Ключа нет — колонку не трогаем вовсе.
-  // rating — не через clean() (число, не строка) — см. cleanRating().
+  // rating и round — не через clean() (числа, не строки) — см.
+  // cleanRating()/cleanRound().
   const ПОЛЯ = [
     { ключ: 'c', колонка: 'color', предел: 4 },
     { ключ: 'note', колонка: 'note', предел: MAX_NOTE },
     { ключ: 'fin', колонка: 'fin', предел: 120 },
     { ключ: 'rating', колонка: 'rating', рейтинг: true },
+    { ключ: 'round', колонка: 'round', раунд: true },
   ];
 
   // Занимаем сразу столько номеров, сколько правок: одним запросом,
@@ -154,17 +162,18 @@ export async function onRequestPost({ request, env }) {
   // уходит отдельным параметром: SQLite сам отличить «null, потому что
   // стёрли» от «null, потому что не прислали» не может.
   const upsert = env.DB.prepare(
-    `INSERT INTO marks (id, color, note, fin, rating, author, at, rev)
-     VALUES (?1, ?2, ?3, ?4, ?5, ?6, ?7, ?8)
+    `INSERT INTO marks (id, color, note, fin, rating, round, author, at, rev)
+     VALUES (?1, ?2, ?3, ?4, ?5, ?6, ?7, ?8, ?9)
      ON CONFLICT(id) DO UPDATE SET
-       color  = CASE WHEN ?9  THEN excluded.color  ELSE marks.color  END,
-       note   = CASE WHEN ?10 THEN excluded.note   ELSE marks.note   END,
-       fin    = CASE WHEN ?11 THEN excluded.fin    ELSE marks.fin    END,
-       rating = CASE WHEN ?12 THEN excluded.rating ELSE marks.rating END,
+       color  = CASE WHEN ?10 THEN excluded.color  ELSE marks.color  END,
+       note   = CASE WHEN ?11 THEN excluded.note   ELSE marks.note   END,
+       fin    = CASE WHEN ?12 THEN excluded.fin    ELSE marks.fin    END,
+       rating = CASE WHEN ?13 THEN excluded.rating ELSE marks.rating END,
+       round  = CASE WHEN ?14 THEN excluded.round  ELSE marks.round  END,
        author = excluded.author, at = excluded.at, rev = excluded.rev`
   );
   const log = env.DB.prepare(
-    'INSERT INTO marks_log (id, color, note, fin, rating, author, at, fields) VALUES (?1, ?2, ?3, ?4, ?5, ?6, ?7, ?8)'
+    'INSERT INTO marks_log (id, color, note, fin, rating, round, author, at, fields) VALUES (?1, ?2, ?3, ?4, ?5, ?6, ?7, ?8, ?9)'
   );
 
   const batch = [];
@@ -174,17 +183,20 @@ export async function onRequestPost({ request, env }) {
     const тронуто = [];
     for (const п of ПОЛЯ) {
       const есть = Object.prototype.hasOwnProperty.call(m, п.ключ);
-      знач[п.колонка] = есть ? (п.рейтинг ? cleanRating(m[п.ключ]) : clean(m[п.ключ], п.предел)) : null;
+      знач[п.колонка] = есть
+        ? (п.рейтинг ? cleanRating(m[п.ключ]) : п.раунд ? cleanRound(m[п.ключ]) : clean(m[п.ключ], п.предел))
+        : null;
       if (есть) тронуто.push(п.колонка);
     }
     batch.push(upsert.bind(
-      id, знач.color, знач.note, знач.fin, знач.rating, author, at, base + i + 1,
+      id, знач.color, знач.note, знач.fin, знач.rating, знач.round, author, at, base + i + 1,
       тронуто.indexOf('color') !== -1 ? 1 : 0,
       тронуто.indexOf('note') !== -1 ? 1 : 0,
       тронуто.indexOf('fin') !== -1 ? 1 : 0,
-      тронуто.indexOf('rating') !== -1 ? 1 : 0
+      тронуто.indexOf('rating') !== -1 ? 1 : 0,
+      тронуто.indexOf('round') !== -1 ? 1 : 0
     ));
-    batch.push(log.bind(id, знач.color, знач.note, знач.fin, знач.rating, author, at, тронуто.join(',')));
+    batch.push(log.bind(id, знач.color, знач.note, знач.fin, знач.rating, знач.round, author, at, тронуто.join(',')));
   });
 
   await env.DB.batch(batch);
