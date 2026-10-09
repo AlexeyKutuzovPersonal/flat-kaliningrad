@@ -314,6 +314,50 @@ INSERT INTO marks (id, color, note, fin, rating, author, at, rev) VALUES ('t:д�
       await B.evaluate((x) => !window.slStore.marks()[x], id));
     ok(true, 'снятие метки и заметки доехало до второго браузера');
 
+    // --- 4б. перенос метки с запасного ключа не теряет заметку и раунд ---
+    // Тот же тест, что у дома (2026-10-09): компонент общий. До починки
+    // touch() под новым ключом уезжало только правленое поле, а со старого
+    // стирались цвет, заметка и отделка — заметка терялась на сервере,
+    // раунд висел под старым ключом.
+    console.log('\n4б. Перенос метки с запасного ключа строки');
+    const пара = await A.evaluate(() => {
+      const rows = JSON.parse(document.getElementById('slData').textContent);
+      const shown = new Set([...document.querySelectorAll('#slBody .mkb')].map((b) => b.dataset.id));
+      const r = rows.find((x) => shown.has(x.id) && x.altIds && x.altIds.length);
+      return r ? { id: r.id, alt: r.altIds[0] } : null;
+    });
+    ok(!!пара, 'на странице есть строка с запасным ключом');
+    if (пара) {
+      const заметкаАлт = 'заметка под старым ключом';
+      const посев = await fetch(`${BASE}/api/marks`, {
+        method: 'POST', headers: { 'content-type': 'application/json', 'x-sync-token': TOKEN },
+        body: JSON.stringify({ by: 'тест', changes: { [пара.alt]: { c: 'y', note: заметкаАлт, round: 2 } } }),
+      });
+      ok(посев.ok, 'метка с заметкой и раундом посеяна под запасным ключом');
+      await A.evaluate(() => window.slSync.poll());
+      await B.evaluate(() => window.slSync.poll());
+      await sleep(800);
+      await A.click(`#slBody .mkb[data-id="${пара.id}"][data-c="g"]`);
+      await settle(A, 'Алексея');
+      const сервер = await (await fetch(`${BASE}/api/marks?since=0`, { headers: { 'x-sync-token': TOKEN } })).json();
+      const нов = сервер.marks[пара.id] || {}, стар = сервер.marks[пара.alt] || {};
+      ok(нов.c === 'g' && нов.note === заметкаАлт && нов.round === 2,
+        'на сервере под текущим ключом — новый цвет, прежняя заметка и прежний раунд');
+      ok(!стар.c && !стар.note && !стар.round, 'под старым ключом погашено всё, включая раунд');
+      await B.evaluate(() => window.slSync.poll());
+      await sleep(800);
+      const уВторого = await B.evaluate((x) => window.slStore.marks()[x], пара.id);
+      ok(!!(уВторого && уВторого.note === заметкаАлт && уВторого.round === 2 && уВторого.c === 'g'),
+        'второй браузер видит перенесённую заметку и раунд, а не только цвет');
+      // убираем за собой: дальше проверки ждут чистую строку
+      await A.click(`#slBody .mkb[data-id="${пара.id}"][data-c="g"]`);
+      await A.fill(`#slBody .sl-note[data-id="${пара.id}"]`, '');
+      await A.selectOption(`#slBody select.sl-round[data-id="${пара.id}"]`, '');
+      await settle(A, 'Алексея');
+      await B.evaluate(() => window.slSync.poll());
+      await sleep(800);
+    }
+
     // --- 5. состояние связи проговаривается ---
     const текстПанели = await A.evaluate(() =>
       (document.getElementById('slStoreTxt') || {}).textContent || '');
